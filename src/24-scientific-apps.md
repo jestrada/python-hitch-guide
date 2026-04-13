@@ -6,19 +6,19 @@
 
 Python is frequently used for high-performance scientific applications. It is widely used in academia and scientific projects because it is easy to write and performs well.
 
-Due to its high performance nature, scientific computing in Python often utilizes external libraries, typically written in faster languages (like C, or Fortran for matrix operations). The main libraries used are [NumPy](http://numpy.scipy.org/), [SciPy](http://scipy.org/) and [Matplotlib](http://matplotlib.sourceforge.net/). Going into detail about these libraries is beyond the scope of the Python guide. However, a comprehensive introduction to the scientific Python ecosystem can be found in the [Python Scientific Lecture Notes](http://scipy-lectures.github.com/).
+Due to its high performance nature, scientific computing in Python often utilizes external libraries, typically written in faster languages (like C, or Fortran for matrix operations). The main libraries used are [NumPy](https://numpy.org/), [SciPy](http://scipy.org/) and [Matplotlib](https://matplotlib.org/). Going into detail about these libraries is beyond the scope of the Python guide. However, a comprehensive introduction to the scientific Python ecosystem can be found in the [Python Scientific Lecture Notes](http://scipy-lectures.github.com/).
 
 ## Tools
 
 ### IPython
 
-[IPython](http://ipython.org/) is an enhanced version of Python interpreter, which provides features of great interest to scientists. The [inline mode] allows graphics and plots to be displayed in the terminal (Qt based version). Moreover, the [notebook] mode supports literate programming and reproducible science generating a web-based Python notebook. This notebook allows you to store chunks of Python code alongside the results and additional comments (HTML, LaTeX, Markdown). The notebook can then be shared and exported in various file formats.
+[IPython](https://ipython.org/) is an enhanced version of Python interpreter, which provides features of great interest to scientists. The [inline mode] allows graphics and plots to be displayed in the terminal (Qt based version). Moreover, the [notebook] mode supports literate programming and reproducible science generating a web-based Python notebook. This notebook allows you to store chunks of Python code alongside the results and additional comments (HTML, LaTeX, Markdown). The notebook can then be shared and exported in various file formats.
 
 ## Libraries
 
 ### NumPy
 
-[NumPy](http://numpy.scipy.org/) is a low level library written in C (and Fortran) for high level mathematical functions. NumPy cleverly overcomes the problem of running slower algorithms on Python by using multidimensional arrays and functions that operate on arrays. Any algorithm can then be expressed as a function on arrays, allowing the algorithms to be run quickly.
+[NumPy](https://numpy.org/) is a low level library written in C (and Fortran) for high level mathematical functions. NumPy cleverly overcomes the problem of running slower algorithms on Python by using multidimensional arrays and functions that operate on arrays. Any algorithm can then be expressed as a function on arrays, allowing the algorithms to be run quickly.
 
 NumPy is part of the SciPy project, and is released as a separate library so people who only need the basic requirements can use it without installing the rest of SciPy.
 
@@ -26,7 +26,7 @@ NumPy is compatible with Python versions 2.4 through 2.7.2 and 3.1+.
 
 ### Numba
 
-[Numba](http://numba.pydata.org) is a NumPy aware Python compiler (just-in-time (JIT) specializing compiler) which compiles annotated Python (and NumPy) code to LLVM (Low Level Virtual Machine) through special decorators. Briefly, Numba uses a system that compiles Python code with LLVM to code which can be natively executed at runtime.
+[Numba](https://numba.pydata.org) is a NumPy aware Python compiler (just-in-time (JIT) specializing compiler) which compiles annotated Python (and NumPy) code to LLVM (Low Level Virtual Machine) through special decorators. Briefly, Numba uses a system that compiles Python code with LLVM to code which can be natively executed at runtime.
 
 ### SciPy
 
@@ -34,11 +34,11 @@ NumPy is compatible with Python versions 2.4 through 2.7.2 and 3.1+.
 
 ### Matplotlib
 
-[Matplotlib](http://matplotlib.sourceforge.net/) is a flexible plotting library for creating interactive 2D and 3D plots that can also be saved as manuscript-quality figures. The API in many ways reflects that of [MATLAB](http://www.mathworks.com/products/matlab/), easing transition of MATLAB users to Python. Many examples, along with the source code to recreate them, are available in the [matplotlib gallery](http://matplotlib.sourceforge.net/gallery.html).
+[Matplotlib](https://matplotlib.org/) is a flexible plotting library for creating interactive 2D and 3D plots that can also be saved as manuscript-quality figures. The API in many ways reflects that of [MATLAB](http://www.mathworks.com/products/matlab/), easing transition of MATLAB users to Python. Many examples, along with the source code to recreate them, are available in the [matplotlib gallery](https://matplotlib.org/gallery.html).
 
 ### Pandas
 
-[Pandas](http://pandas.pydata.org/) is a data manipulation library based on NumPy which provides many useful functions for accessing, indexing, merging, and grouping data easily. The main data structure (DataFrame) is close to what could be found in the R statistical package; that is, heterogeneous data tables with name indexing, time series operations, and auto-alignment of data.
+[Pandas](https://pandas.pydata.org/) is a data manipulation library based on NumPy which provides many useful functions for accessing, indexing, merging, and grouping data easily. The main data structure (DataFrame) is close to what could be found in the R statistical package; that is, heterogeneous data tables with name indexing, time series operations, and auto-alignment of data.
 
 ### xarray
 

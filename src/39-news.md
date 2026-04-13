@@ -48,13 +48,13 @@ Python Weekly is a free weekly newsletter featuring curated news, articles, new 
 
 Python News is the news section in the official Python web site (www.python.org). It briefly highlights the news from the Python community.
 
-> [Python News](http://www.python.org/blogs/)
+> [Python News](https://www.python.org/blogs/)
 
 ## Import Python Weekly
 
 Weekly Python Newsletter containing Python Articles, Projects, Videos, and Tweets delivered in your inbox. Keep Your Python Programming Skills Updated.
 
-> [Import Python Weekly Newsletter](http://www.importpython.com/newsletter/)
+> [Import Python Weekly Newsletter](https://www.importpython.com/newsletter/)
 
 ## Awesome Python Newsletter
 

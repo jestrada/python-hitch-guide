@@ -34,17 +34,17 @@ PyGTK provides Python bindings for the GTK+ toolkit. However, it has been supers
 
 [PyGObject](https://wiki.gnome.org/Projects/PyGObject) provides Python bindings which gives access to the entire GNOME software platform. It is fully compatible with GTK+ 3. Here is a tutorial to get started with [Python GTK+ 3 Tutorial](https://python-gtk-3-tutorial.readthedocs.io/en/latest/).
 
-[API Reference](http://lazka.github.io/pgi-docs/)
+[API Reference](https://lazka.github.io/pgi-docs/)
 
 ## Kivy
 
-[Kivy](http://kivy.org) is a Python library for development of multi-touch enabled media rich applications. The aim is to allow for quick and easy interaction design and rapid prototyping, while making your code reusable and deployable.
+[Kivy](https://kivy.org) is a Python library for development of multi-touch enabled media rich applications. The aim is to allow for quick and easy interaction design and rapid prototyping, while making your code reusable and deployable.
 
 Kivy is written in Python, based on OpenGL, and supports different input devices such as: Mouse, Dual Mouse, TUIO, WiiMote, WM_TOUCH, HIDtouch, Apple"s products, and so on.
 
 Kivy is actively being developed by a community and is free to use. It operates on all major platforms (Linux, OS X, Windows, Android).
 
-The main resource for information is the website: <http://kivy.org>
+The main resource for information is the website: <https://kivy.org>
 
 ## PyObjC
 
@@ -84,7 +84,7 @@ PyQt provides Python bindings for the Qt Framework (see below).
 
 Pyjs Desktop is a application widget set for desktop and a cross-platform framework. It allows the exact same Python web application source code to be executed as a standalone desktop application.
 
-The main website: [pyjs](http://pyjs.org/).
+The main website: [pyjs](https://pyjs.org/).
 
 ## Qt
 

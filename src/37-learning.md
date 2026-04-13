@@ -50,19 +50,19 @@ Techbeamers.com provides step-by-step tutorials to teach Python. Each tutorial i
 
 Online Python Tutor gives you a visual step-by-step representation of how your program runs. Python Tutor helps people overcome a fundamental barrier to learning programming by understanding what happens as the computer executes each line of a program"s source code.
 
-> [Online Python Tutor](http://pythontutor.com/)
+> [Online Python Tutor](https://pythontutor.com/)
 
 ### Invent Your Own Computer Games with Python
 
 This beginner"s book is for those with no programming experience at all. Each chapter has the source code to a small game, using these example programs to demonstrate programming concepts to give the reader an idea of what programs "look like".
 
-> [Invent Your Own Computer Games with Python](http://inventwithpython.com/)
+> [Invent Your Own Computer Games with Python](https://inventwithpython.com/)
 
 ### Hacking Secret Ciphers with Python
 
 This book teaches Python programming and basic cryptography for absolute beginners. The chapters provide the source code for various ciphers, as well as programs that can break them.
 
-> [Hacking Secret Ciphers with Python](http://inventwithpython.com/hacking/)
+> [Hacking Secret Ciphers with Python](https://inventwithpython.com/hacking/)
 
 ### Learn Python the Hard Way
 
@@ -80,7 +80,7 @@ Also known as *Python for Programmers with 3 Hours*, this guide gives experience
 
 Dive Into Python 3 is a good book for those ready to jump in to Python 3. It"s a good read if you are moving from Python 2 to 3 or if you already have some experience programming in another language.
 
-> [Dive Into Python 3](http://diveintopython3.problemsolving.io/)
+> [Dive Into Python 3](https://diveintopython3.problemsolving.io/)
 
 ### Think Python: How to Think Like a Computer Scientist
 
@@ -90,7 +90,7 @@ While exploring the various features available in the Python language the author
 
 The book also includes several case studies which have the reader explore the topics discussed in the book in greater detail by applying those topics to real-world examples. Case studies include assignments in GUI programming and Markov Analysis.
 
-> [Think Python](http://greenteapress.com/thinkpython/html/index.html)
+> [Think Python](https://greenteapress.com/thinkpython/html/index.html)
 
 ### Python Koans
 
@@ -108,7 +108,7 @@ More information about test driven development can be found at these resources:
 
 A free introductory book that teaches Python at the beginner level, it assumes no previous programming experience.
 
-> [A Byte of Python for Python 2.x](http://www.ibiblio.org/swaroopch/byteofpython/read/) [A Byte of Python for Python 3.x](https://python.swaroopch.com/)
+> [A Byte of Python for Python 2.x](https://www.ibiblio.org/swaroopch/byteofpython/read/) [A Byte of Python for Python 3.x](https://python.swaroopch.com/)
 
 ### Computer Science Path on Codecademy
 

@@ -10,7 +10,7 @@ A brief description of both is given below.
 
 The [Python Imaging Library](http://www.pythonware.com/products/pil/), or PIL for short, is one of the core libraries for image manipulation in Python. Unfortunately, its development has stagnated, with its last release in 2009.
 
-Luckily for you, there"s an actively-developed fork of PIL called [Pillow](http://python-pillow.github.io/) \-- it"s easier to install, runs on all major operating systems, and supports Python 3.
+Luckily for you, there"s an actively-developed fork of PIL called [Pillow](https://python-pillow.github.io/) \-- it"s easier to install, runs on all major operating systems, and supports Python 3.
 
 ### Installation
 
@@ -53,7 +53,7 @@ Open Source Computer Vision, more commonly known as OpenCV, is a more advanced i
 
 ### Installation
 
-In Python, image processing using OpenCV is implemented using the `cv2` and `NumPy` modules. The [installation instructions for OpenCV](http://docs.opencv.org/2.4/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-of-content-introduction) should guide you through configuring the project for yourself.
+In Python, image processing using OpenCV is implemented using the `cv2` and `NumPy` modules. The [installation instructions for OpenCV](https://docs.opencv.org/2.4/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html#table-of-content-introduction) should guide you through configuring the project for yourself.
 
 NumPy can be downloaded from the Python Package Index(PyPI):
 

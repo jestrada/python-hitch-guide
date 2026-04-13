@@ -10,7 +10,7 @@ Guido van Rossum, the creator of Python, is often referred to as the BDFL --- th
 
 The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers.
 
-[Learn More about the PSF](http://www.python.org/psf/).
+[Learn More about the PSF](https://www.python.org/psf/).
 
 ## PEPs
 
@@ -54,7 +54,7 @@ There are a few PEPs that could be considered required reading:
 
   :   Gives guidelines for semantics and conventions associated with Python docstrings.
 
-You can read more at [The PEP Index](http://www.python.org/dev/peps/).
+You can read more at [The PEP Index](https://www.python.org/dev/peps/).
 
 ### Submitting a PEP
 

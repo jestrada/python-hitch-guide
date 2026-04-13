@@ -12,13 +12,13 @@ The SciPy stack consists of a bunch of core helper packages used in data science
 
 The Stack consists of the following packages (link to documentation given):
 
-1.  [NumPy](http://www.numpy.org/)
+1.  [NumPy](https://numpy.org/)
 2.  [SciPy library](https://www.scipy.org/)
-3.  [Matplotlib](http://matplotlib.org/)
+3.  [Matplotlib](https://matplotlib.org/)
 4.  [IPython](https://ipython.org/)
-5.  [pandas](http://pandas.pydata.org/)
-6.  [Sympy](http://www.sympy.org/en/index.html)
-7.  [nose](http://nose.readthedocs.io/en/latest/)
+5.  [pandas](https://pandas.pydata.org/)
+6.  [Sympy](https://www.sympy.org/en/index.html)
+7.  [nose](https://nose.readthedocs.io/en/latest/)
 
 The stack also comes with Python bundled in, but has been excluded from the above list.
 
@@ -48,11 +48,11 @@ Through conda:
 conda install scikit-learn
 ```
 
-scikit-learn also comes shipped with Anaconda (mentioned above). For more installation instructions, refer to [this link](http://scikit-learn.org/stable/install.html).
+scikit-learn also comes shipped with Anaconda (mentioned above). For more installation instructions, refer to [this link](https://scikit-learn.org/stable/install.html).
 
 ### Example
 
-For this example, we train a simple classifier on the [Iris dataset](http://en.wikipedia.org/wiki/Iris_flower_data_set), which comes bundled in with scikit-learn.
+For this example, we train a simple classifier on the [Iris dataset](https://en.wikipedia.org/wiki/Iris_flower_data_set), which comes bundled in with scikit-learn.
 
 The dataset takes four features of flowers: sepal length, sepal width, petal length, and petal width, and classifies them into three flower species (labels): setosa, versicolor, or virginica. The labels have been represented as numbers in the dataset: 0 (setosa), 1 (versicolor), and 2 (virginica).
 
@@ -109,4 +109,4 @@ Since we"re splitting randomly and the classifier trains on every iteration, the
 
 The first line contains the labels (i.e. flower species) of the testing data as predicted by our classifier, and the second line contains the actual flower species as given in the dataset. We thus get an accuracy of 100% this time.
 
-More on scikit-learn can be read in the [documentation](http://scikit-learn.org/stable/user_guide.html).
+More on scikit-learn can be read in the [documentation](https://scikit-learn.org/stable/user_guide.html).

@@ -120,5 +120,5 @@ Having said all that, here"s how to do it:
 ### Useful Tools
 
 - [fpm](https://github.com/jordansissel/fpm)
-- [alien](http://joeyh.name/code/alien/)
+- [alien](https://joeyh.name/code/alien/)
 - [dh-virtualenv](https://dh-virtualenv.readthedocs.io/) (for APT/DEB omnibus packaging)

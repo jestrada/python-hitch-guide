@@ -4,7 +4,7 @@
 
 Your source publication *needs* a license. In the US, unless a license is specified, users have no legal right to download, modify, or distribute the product. Furthermore, people can"t contribute to your code unless you tell them what rules to play by. Choosing a license is complicated, so here are some pointers:
 
-Open source. There are plenty of [open source licenses](http://opensource.org/licenses/alphabetical) available to choose from.
+Open source. There are plenty of [open source licenses](https://opensource.org/licenses/alphabetical) available to choose from.
 
 In general, these licenses tend to fall into one of two categories:
 
@@ -13,7 +13,7 @@ In general, these licenses tend to fall into one of two categories:
 
 The latter are less permissive in the sense that they don"t permit someone to add code to the software and distribute it without also including the source code for their changes.
 
-To help you choose one for your project, there"s a [license chooser](http://choosealicense.com/); **use it**.
+To help you choose one for your project, there"s a [license chooser](https://choosealicense.com/); **use it**.
 
 **More Permissive**
 

@@ -2,7 +2,7 @@
 
 ![image](https://docs.python-guide.org/_static/photos/34725946825_0f85497e60_k_d.jpg)
 
-From the [official Python website](http://python.org/about/):
+From the [official Python website](https://www.python.org/about/):
 
 Python is a general-purpose, high-level programming language similar to Tcl, Perl, Ruby, Scheme, or Java. Some of its main key features include:
 
@@ -14,7 +14,7 @@ Python is a general-purpose, high-level programming language similar to Tcl, Per
 
   Python is sometimes described with the words "batteries included" because of its extensive [standard library](https://docs.python.org/library/), which includes modules for regular expressions, file IO, fraction handling, object serialization, and much more.
 
-  Additionally, the [Python Package Index](https://pypi.org) is available for users to submit their packages for widespread use, similar to Perl"s [CPAN](https://www.cpan.org). There is a thriving community of very powerful Python frameworks and tools like the [Django](https://www.djangoproject.com) web framework and the [NumPy](http://numpy.scipy.org) set of math routines.
+  Additionally, the [Python Package Index](https://pypi.org) is available for users to submit their packages for widespread use, similar to Perl"s [CPAN](https://www.cpan.org). There is a thriving community of very powerful Python frameworks and tools like the [Django](https://www.djangoproject.com) web framework and the [NumPy](https://numpy.org) set of math routines.
 
 - **integration with other systems**
 

@@ -45,7 +45,7 @@ Python"s default arguments are evaluated *once* when the function is defined, no
 
 ### What You Should Do Instead
 
-Create a new object each time the function is called, by using a default arg to signal that no argument was provided (`None`{.interpreted-text role="py:data"} is often a good choice).
+Create a new object each time the function is called, by using a default arg to signal that no argument was provided (`None` is often a good choice).
 
 ``` python
 def append_to(element, to=None):

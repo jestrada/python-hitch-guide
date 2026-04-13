@@ -8,7 +8,7 @@ This handcrafted guide exists to provide both novice and expert Python developer
 
 This guide is **opinionated** in a way that is almost, but not quite, entirely _unlike_ Python's official documentation. You won't find a list of every Python web framework available here. Rather, you'll find a nice concise list of highly recommended options.
 
-> The use of **Python 3** is _highly_ recommended over Python 2. Consider upgrading your applications and infrastructures if you find yourself _still_ using Python 2 in production today. If you are using Python 3, congratulations — you are indeed a person of excellent taste. — _Kenneth Reitz_
+> Python 3 is the standard. If you are using Python 3, congratulations — you are indeed a person of excellent taste. — _Kenneth Reitz_
 
 Let's get started! But first, let's make sure you know where your towel is.
 

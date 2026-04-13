@@ -8,7 +8,7 @@
 
 ## PyZMQ
 
-[PyZMQ](https://zeromq.github.com/pyzmq/) is the Python binding for [ZeroMQ](http://zeromq.org/), which is a high-performance asynchronous messaging library. One great advantage of ZeroMQ is that it can be used for message queuing without a message broker. The basic patterns for this are:
+[PyZMQ](https://zeromq.github.com/pyzmq/) is the Python binding for [ZeroMQ](https://zeromq.org/), which is a high-performance asynchronous messaging library. One great advantage of ZeroMQ is that it can be used for message queuing without a message broker. The basic patterns for this are:
 
 - request-reply: connects a set of clients to a set of services. This is a remote procedure call and task distribution pattern.
 - publish-subscribe: connects a set of publishers to a set of subscribers. This is a data distribution pattern.
@@ -18,4 +18,4 @@ For a quick start, read the [ZeroMQ guide](http://zguide.zeromq.org/page:all).
 
 ## gevent
 
-[gevent](http://www.gevent.org/) is a coroutine-based Python networking library that uses greenlets to provide a high-level synchronous API on top of the libev event loop.
+[gevent](https://www.gevent.org/) is a coroutine-based Python networking library that uses greenlets to provide a high-level synchronous API on top of the libev event loop.

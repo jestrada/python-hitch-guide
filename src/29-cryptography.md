@@ -4,7 +4,7 @@
 
 ## cryptography
 
-[cryptography](https://cryptography.io/en/latest/) is an actively developed library that provides cryptographic recipes and primitives. It supports Python 2.6-2.7, Python 3.3+, and PyPy.
+[cryptography](https://cryptography.io/en/latest/) is an actively developed library that provides cryptographic recipes and primitives. It supports Python 3.8+ and PyPy.
 
 cryptography is divided into two layers of recipes and hazardous materials (hazmat). The recipes layer provides a simple API for proper symmetric encryption and the hazmat layer provides low-level cryptographic primitives.
 
@@ -28,9 +28,9 @@ plain_text = cipher_suite.decrypt(cipher_text)
 
 ## GPGME bindings
 
-The [GPGME Python bindings](https://dev.gnupg.org/source/gpgme/browse/master/lang/python/) provide Pythonic access to [GPG Made Easy](https://dev.gnupg.org/source/gpgme/browse/master/), a C API for the entire GNU Privacy Guard suite of projects, including GPG, libgcrypt, and gpgsm (the S/MIME engine). It supports Python 2.6, 2.7, 3.4, and above. Depends on the SWIG C interface for Python as well as the GnuPG software and libraries.
+The [GPGME Python bindings](https://dev.gnupg.org/source/gpgme/browse/master/lang/python/) provide Pythonic access to [GPG Made Easy](https://dev.gnupg.org/source/gpgme/browse/master/), a C API for the entire GNU Privacy Guard suite of projects, including GPG, libgcrypt, and gpgsm (the S/MIME engine). It supports Python 3.8+. Depends on the SWIG C interface for Python as well as the GnuPG software and libraries.
 
-A more comprehensive [GPGME Python Bindings HOWTO](https://dev.gnupg.org/source/gpgme/browse/master/lang/python/docs/GPGMEpythonHOWTOen.org) is available with the source, and an HTML version is available [at http://files.au.adversary.org](http://files.au.adversary.org/crypto/GPGMEpythonHOWTOen.html). Python 3 sample scripts from the examples in the HOWTO are also provided with the source and are accessible [at gnupg.org](https://dev.gnupg.org/source/gpgme/browse/master/lang/python/examples/howto/).
+A more comprehensive [GPGME Python Bindings HOWTO](https://dev.gnupg.org/source/gpgme/browse/master/lang/python/docs/GPGMEpythonHOWTOen.org) is available with the source, and an HTML version is available [at https://files.au.adversary.org](https://files.au.adversary.org/crypto/GPGMEpythonHOWTOen.html). Python 3 sample scripts from the examples in the HOWTO are also provided with the source and are accessible [at gnupg.org](https://dev.gnupg.org/source/gpgme/browse/master/lang/python/examples/howto/).
 
 Available under the same terms as the rest of the GnuPG Project: GPLv2 and LGPLv2.1, both with the "or any later version" clause.
 

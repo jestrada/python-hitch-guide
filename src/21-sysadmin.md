@@ -4,7 +4,7 @@
 
 ## Fabric
 
-[Fabric](http://docs.fabfile.org) is a library for simplifying system administration tasks. While Chef and Puppet tend to focus on managing servers and system libraries, Fabric is more focused on application level tasks such as deployment.
+[Fabric](https://docs.fabfile.org) is a library for simplifying system administration tasks. While Chef and Puppet tend to focus on managing servers and system libraries, Fabric is more focused on application level tasks such as deployment.
 
 Install Fabric:
 
@@ -58,11 +58,11 @@ $ fab deploy
 
 Additional features include parallel execution, interaction with remote programs, and host grouping.
 
-> [Fabric Documentation](http://docs.fabfile.org)
+> [Fabric Documentation](https://docs.fabfile.org)
 
 ## Salt
 
-[Salt](http://saltstack.org/) is an open source infrastructure management tool. It supports remote command execution from a central point (master host) to multiple hosts (minions). It also supports system states which can be used to configure multiple servers using simple template files.
+[Salt](https://saltstack.org/) is an open source infrastructure management tool. It supports remote command execution from a central point (master host) to multiple hosts (minions). It also supports system states which can be used to configure multiple servers using simple template files.
 
 Salt can be installed via pip:
 
@@ -78,7 +78,7 @@ The following command lists all available minion hosts, using the ping module.
 $ salt '*' test.ping
 ```
 
-The host filtering is accomplished by matching the minion id or using the grains system. The [grains](http://docs.saltstack.org/en/latest/topics/targeting/grains.html) system uses static host information like the operating system version or the CPU architecture to provide a host taxonomy for the Salt modules.
+The host filtering is accomplished by matching the minion id or using the grains system. The [grains](https://docs.saltproject.io/en/latest/topics/targeting/grains.html) system uses static host information like the operating system version or the CPU architecture to provide a host taxonomy for the Salt modules.
 
 The following command lists all available minions running CentOS using the grains system:
 
@@ -103,7 +103,7 @@ apache:
 
 State files can be written using YAML, the Jinja2 template system, or pure Python.
 
-> [Salt Documentation](http://docs.saltstack.com)
+> [Salt Documentation](https://docs.saltproject.io)
 
 ## Psutil
 
@@ -158,7 +158,7 @@ A full terminal application like a widely extended top is [Glance](https://githu
 
 ## Ansible
 
-[Ansible](http://ansible.com/) is an open source system automation tool. Its biggest advantage over Puppet or Chef is that it does not require an agent on the client machine. Playbooks are Ansible's configuration, deployment, and orchestration language and are written in YAML with Jinja2 for templating.
+[Ansible](https://ansible.com/) is an open source system automation tool. Its biggest advantage over Puppet or Chef is that it does not require an agent on the client machine. Playbooks are Ansible's configuration, deployment, and orchestration language and are written in YAML with Jinja2 for templating.
 
 Ansible can be installed via pip:
 
@@ -192,7 +192,7 @@ To run the playbook:
 $ ansible-playbook ping.yml -i hosts.yml --ask-pass
 ```
 
-The Ansible playbook will ping all of the servers in the `hosts.yml` file. You can also select groups of servers using Ansible. For more information about Ansible, read the [Ansible Docs](http://docs.ansible.com/).
+The Ansible playbook will ping all of the servers in the `hosts.yml` file. You can also select groups of servers using Ansible. For more information about Ansible, read the [Ansible Docs](https://docs.ansible.com/).
 
 [An Ansible tutorial](https://serversforhackers.com/an-ansible-tutorial/) is also a great and detailed introduction to getting started with Ansible.
 
@@ -210,13 +210,13 @@ To create a simple cookbook the [knife](https://docs.chef.io/knife.html) command
 knife cookbook create cookbook_name
 ```
 
-[Getting started with Chef](http://gettingstartedwithchef.com/first-steps-with-chef.html) is a good starting point for Chef Beginners and many community maintained cookbooks that can serve as a good reference or tweaked to serve your infrastructure configuration needs can be found on the [Chef Supermarket](https://supermarket.chef.io/cookbooks).
+[Getting started with Chef](https://gettingstartedwithchef.com/first-steps-with-chef.html) is a good starting point for Chef Beginners and many community maintained cookbooks that can serve as a good reference or tweaked to serve your infrastructure configuration needs can be found on the [Chef Supermarket](https://supermarket.chef.io/cookbooks).
 
 - [Chef Documentation](https://docs.chef.io/)
 
 ## Puppet
 
-[Puppet](http://puppetlabs.com) is IT Automation and configuration management software from Puppet Labs that allows System Administrators to define the state of their IT Infrastructure, thereby providing an elegant way to manage their fleet of physical and virtual machines.
+[Puppet](https://puppetlabs.com) is IT Automation and configuration management software from Puppet Labs that allows System Administrators to define the state of their IT Infrastructure, thereby providing an elegant way to manage their fleet of physical and virtual machines.
 
 Puppet is available both as an Open Source and an Enterprise variant. Modules are small, shareable units of code written to automate or define the state of a system. [Puppet Forge](https://forge.puppetlabs.com/) is a repository for modules written by the community for Open Source and Enterprise Puppet.
 
@@ -284,7 +284,7 @@ service { 'sshd':
 }
 ```
 
-For more information, refer to the [Puppet Labs Documentation](http://docs.puppetlabs.com)
+For more information, refer to the [Puppet Labs Documentation](https://docs.puppetlabs.com)
 
 ## Blueprint
 

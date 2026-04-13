@@ -6,7 +6,6 @@
 
 The official Python Language and Library documentation can be found here:
 
-> - [Python 2.x](https://docs.python.org/2/)
 > - [Python 3.x](https://docs.python.org/3/)
 
 ## Read the Docs

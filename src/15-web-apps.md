@@ -34,15 +34,15 @@ Development Web Server
 
 [Django](https://www.djangoproject.com) is a "batteries included" web application framework, and is an excellent choice for creating content-oriented websites. By providing many utilities and patterns out of the box, Django aims to make it possible to build complex, database-backed web applications quickly, while encouraging best practices in code written using it.
 
-Django has a large and active community, and many pre-built [re-usable modules](http://djangopackages.com/) that can be incorporated into a new project as-is, or customized to fit your needs.
+Django has a large and active community, and many pre-built [re-usable modules](https://djangopackages.com/) that can be incorporated into a new project as-is, or customized to fit your needs.
 
-There are annual Django conferences [in the United States](http://djangocon.us), [Europe](http://djangocon.eu), and [Australia](http://djangocon.com.au).
+There are annual Django conferences [in the United States](https://djangocon.us), [Europe](https://djangocon.eu), and [Australia](https://djangocon.com.au).
 
 The majority of new Python web applications today are built with Django.
 
 ### Flask
 
-[Flask](http://flask.pocoo.org/) is a "microframework" for Python, and is an excellent choice for building smaller applications, APIs, and web services.
+[Flask](https://flask.palletsprojects.com/) is a "microframework" for Python, and is an excellent choice for building smaller applications, APIs, and web services.
 
 Building an app with Flask is a lot like writing standard Python modules, except some functions have routes attached to them. It"s really beautiful.
 
@@ -50,7 +50,7 @@ Rather than aiming to provide everything you could possibly need, Flask implemen
 
 If you use Flask, it is up to you to choose other components for your application, if any. For example, database access or form generation and validation are not built-in functions of Flask.
 
-This is great, because many web applications don"t need those features. For those that do, there are many [Extensions](http://flask.pocoo.org/extensions/) available that may suit your needs. Or, you can easily use any library you want yourself!
+This is great, because many web applications don"t need those features. For those that do, there are many [Extensions](https://flask.palletsprojects.com/extensions/) available that may suit your needs. Or, you can easily use any library you want yourself!
 
 Flask is default choice for any Python web application that isn"t a good fit for Django.
 
@@ -98,7 +98,7 @@ It includes tools and utilities for security and authentication (including OAuth
 
 ### Nginx {#nginx-ref}
 
-[Nginx](http://nginx.org/) (pronounced "engine-x") is a web server and reverse-proxy for HTTP, SMTP, and other protocols. It is known for its high performance, relative simplicity, and compatibility with many application servers (like WSGI servers). It also includes handy features like load-balancing, basic authentication, streaming, and others. Designed to serve high-load websites, Nginx is gradually becoming quite popular.
+[Nginx](https://nginx.org/) (pronounced "engine-x") is a web server and reverse-proxy for HTTP, SMTP, and other protocols. It is known for its high performance, relative simplicity, and compatibility with many application servers (like WSGI servers). It also includes handy features like load-balancing, basic authentication, streaming, and others. Designed to serve high-load websites, Nginx is gradually becoming quite popular.
 
 ## WSGI Servers {#wsgi-servers-ref}
 
@@ -158,7 +158,7 @@ Some general good practices apply to the part of the application passing dynamic
 
 ### Jinja2
 
-[Jinja2](http://jinja.pocoo.org/) is a very well-regarded template engine.
+[Jinja2](https://jinja.palletsprojects.com/) is a very well-regarded template engine.
 
 It uses a text-based template language and can thus be used to generate any type of markup, not just HTML. It allows customization of filters, tags, tests, and globals. It features many improvements over Django"s templating system.
 
@@ -226,7 +226,7 @@ The `base.html` file can be used as base for all site pages which are for exampl
 ``` html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html lang="en">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
     <link rel="stylesheet" href="style.css" />
     <title>{{title}} - My Webpage</title>
@@ -269,7 +269,7 @@ Jinja2 is the recommended templating library for new Python web applications.
 
 [Chameleon](https://chameleon.readthedocs.io/) Page Templates are an HTML/XML template engine implementation of the [Template Attribute Language (TAL)](https://en.wikipedia.org/wiki/Template_Attribute_Language), [TAL Expression Syntax (TALES)](https://chameleon.readthedocs.io/en/latest/reference.html#expressions-tales), and [Macro Expansion TAL (Metal)](https://chameleon.readthedocs.io/en/latest/reference.html#macros-metal) syntaxes.
 
-Chameleon is available for Python 2.5 and up (including 3.x and PyPy), and is commonly used by the [Pyramid Framework](https://trypyramid.com/).
+Chameleon is available for Python 3.x and PyPy, and is commonly used by the [Pyramid Framework](https://trypyramid.com/).
 
 Page Templates add within your document structure special element attributes and text markup. Using a set of simple language constructs, you control the document flow, element repetition, text replacement, and translation. Because of the attribute-based syntax, unrendered page templates are valid HTML and can be viewed in a browser and even edited in WYSIWYG editors. This can make round-trip collaboration with designers and prototyping with static files in a browser easier.
 
@@ -313,7 +313,7 @@ Being from the Pyramid world, Chameleon is not widely used.
 
 ### Mako
 
-[Mako](http://www.makotemplates.org/) is a template language that compiles to Python for maximum performance. Its syntax and API are borrowed from the best parts of other templating languages like Django and Jinja2 templates. It is the default template language included with the [Pylons and Pyramid](http://www.pylonsproject.org/) web frameworks.
+[Mako](http://www.makotemplates.org/) is a template language that compiles to Python for maximum performance. Its syntax and API are borrowed from the best parts of other templating languages like Django and Jinja2 templates. It is the default template language included with the [Pylons and Pyramid](https://pylonsproject.org/) web frameworks.
 
 An example template in Mako looks like:
 

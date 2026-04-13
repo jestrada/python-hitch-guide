@@ -10,7 +10,7 @@ This is where web scraping comes in. Web scraping is the practice of using a com
 
 ## lxml and Requests
 
-[lxml](http://lxml.de/) is a pretty extensive library written for parsing XML and HTML documents very quickly, even handling messed up tags in the process. We will also be using the [Requests](https://requests.readthedocs.io/en/latest/) module as it is more intuitive and feature-rich. Install both with `uv add lxml requests`.
+[lxml](https://lxml.de/) is a pretty extensive library written for parsing XML and HTML documents very quickly, even handling messed up tags in the process. We will also be using the [Requests](https://requests.readthedocs.io/en/latest/) module as it is more intuitive and feature-rich. Install both with `uv add lxml requests`.
 
 Let"s start with the imports:
 
@@ -30,7 +30,7 @@ tree = html.fromstring(page.content)
 
 `tree` now contains the whole HTML file in a nice tree structure which we can go over two different ways: XPath and CSSSelect. In this example, we will focus on the former.
 
-XPath is a way of locating information in structured documents such as HTML or XML documents. A good introduction to XPath is on [W3Schools](http://www.w3schools.com/xml/xpath_intro.asp) .
+XPath is a way of locating information in structured documents such as HTML or XML documents. A good introduction to XPath is on [W3Schools](https://www.w3schools.com/xml/xpath_intro.asp) .
 
 There are also various tools for obtaining the XPath of elements such as FireBug for Firefox or the Chrome Inspector. If you"re using Chrome, you can right click an element, choose "Inspect element", highlight the code, right click again, and choose "Copy XPath".
 

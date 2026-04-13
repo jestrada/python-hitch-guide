@@ -2,7 +2,7 @@
 
 ![image](https://docs.python-guide.org/_static/photos/33175625804_e225b90f3e_k_d.jpg)
 
-CPython, the most commonly used implementation of Python, is slow for CPU bound tasks. [PyPy](http://pypy.org) is fast.
+CPython, the most commonly used implementation of Python, is slow for CPU bound tasks. [PyPy](https://pypy.org) is fast.
 
 Using a slightly modified version of [David Beazley"s](http://www.dabeaz.com/GIL/gilvis/measure2.py) CPU bound test code (added loop for multiple tests), you can see the difference between CPython and PyPy"s processing.
 
@@ -161,7 +161,7 @@ Cython time: 0.0054 seconds
 Python time: 0.0566 seconds
 ```
 
-And here is the output of an embedded [ARM beaglebone](http://beagleboard.org/Products/BeagleBone) machine:
+And here is the output of an embedded [ARM beaglebone](https://beagleboard.org/Products/BeagleBone) machine:
 
 ``` console
 Cython time: 0.0196 seconds
