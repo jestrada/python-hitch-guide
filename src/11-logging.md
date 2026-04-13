@@ -2,7 +2,7 @@
 
 ![image](https://docs.python-guide.org/_static/photos/35254379756_c9fe23f843_k_d.jpg)
 
-The `logging`{.interpreted-text role="mod"} module has been a part of Python"s Standard Library since version 2.3. It is succinctly described in `282`{.interpreted-text role="pep"}. The documentation is notoriously hard to read, except for the [basic logging tutorial](http://docs.python.org/3/howto/logging.html#logging-basic-tutorial).
+The `logging` module has been a part of Python"s Standard Library since the early days of Python. It is succinctly described in `282`. The documentation is notoriously hard to read, except for the [basic logging tutorial](https://docs.python.org/3/howto/logging.html#logging-basic-tutorial).
 
 As an alternative, [loguru](https://github.com/Delgan/loguru) provides an approach for logging, nearly as simple as using a simple `print` statement.
 
@@ -17,11 +17,11 @@ The only time that `print` is a better option than logging is when the goal is t
 
 - The [log record](https://docs.python.org/3/library/logging.html#logrecord-attributes), which is created with every logging event, contains readily available diagnostic information such as the file name, full path, function, and line number of the logging event.
 - Events logged in included modules are automatically accessible via the root logger to your application"s logging stream, unless you filter them out.
-- Logging can be selectively silenced by using the method `logging.Logger.setLevel`{.interpreted-text role="meth"} or disabled by setting the attribute `logging.Logger.disabled`{.interpreted-text role="attr"} to `True`.
+- Logging can be selectively silenced by using the method `logging.Logger.setLevel` or disabled by setting the attribute `logging.Logger.disabled` to `True`.
 
 ## Logging in a Library
 
-Notes for [configuring logging for a library](https://docs.python.org/3/howto/logging.html#configuring-logging-for-a-library) are in the [logging tutorial](http://docs.python.org/3/howto/logging.html). Because the *user*, not the library, should dictate what happens when a logging event occurs, one admonition bears repeating:
+Notes for [configuring logging for a library](https://docs.python.org/3/howto/logging.html#configuring-logging-for-a-library) are in the [logging tutorial](https://docs.python.org/3/howto/logging.html). Because the *user*, not the library, should dictate what happens when a logging event occurs, one admonition bears repeating:
 
 > **Note:**
 
@@ -31,7 +31,7 @@ Note
 It is strongly advised that you do not add any handlers other than NullHandler to your library's loggers.
 :
 
-Best practice when instantiating loggers in a library is to only create them using the `__name__` global variable: the `logging`{.interpreted-text role="mod"} module creates a hierarchy of loggers using dot notation, so using `__name__` ensures no name collisions.
+Best practice when instantiating loggers in a library is to only create them using the `__name__` global variable: the `logging` module creates a hierarchy of loggers using dot notation, so using `__name__` ensures no name collisions.
 
 Here is an example of the best practice from the [requests source](https://github.com/kennethreitz/requests) \-- place this in your `__init__.py`:
 
@@ -50,14 +50,14 @@ There are at least three ways to configure a logger:
 
   Using an INI-formatted file:
 
-  :   - **Pro**: possible to update configuration while running, using the function `logging.config.listen`{.interpreted-text role="func"} to listen on a socket.
+  :   - **Pro**: possible to update configuration while running, using the function `logging.config.listen` to listen on a socket.
       - **Con**: less control (e.g. custom subclassed filters or loggers) than possible when configuring a logger in code.
 
 - 
 
   Using a dictionary or a JSON-formatted file:
 
-  :   - **Pro**: in addition to updating while running, it is possible to load from a file using the `json`{.interpreted-text role="mod"} module, in the standard library since Python 2.6.
+  :   - **Pro**: in addition to updating while running, it is possible to load from a file using the `json` module, in the standard library.
       - **Con**: less control than when configuring a logger in code.
 
 - 
@@ -69,7 +69,7 @@ There are at least three ways to configure a logger:
 
 ### Example Configuration via an INI File
 
-Let us say that the file is named `logging_config.ini`. More details for the file format are in the [logging configuration](https://docs.python.org/3/howto/logging.html#configuring-logging) section of the [logging tutorial](http://docs.python.org/3/howto/logging.html).
+Let us say that the file is named `logging_config.ini`. More details for the file format are in the [logging configuration](https://docs.python.org/3/howto/logging.html#configuring-logging) section of the [logging tutorial](https://docs.python.org/3/howto/logging.html).
 
 ``` ini
 [loggers]
@@ -95,7 +95,7 @@ args=(sys.stderr,)
 format=%(asctime)s %(name)-12s %(levelname)-8s %(message)s
 ```
 
-Then use `logging.config.fileConfig`{.interpreted-text role="meth"} in the code:
+Then use `logging.config.fileConfig` in the code:
 
 ``` python
 import logging
@@ -108,7 +108,7 @@ logger.debug('often makes a very good meal of %s', 'visiting tourists')
 
 ### Example Configuration via a Dictionary
 
-As of Python 2.7, you can use a dictionary with configuration details. `391`{.interpreted-text role="pep"} contains a list of the mandatory and optional elements in the configuration dictionary.
+You can use a dictionary with configuration details. `391` contains a list of the mandatory and optional elements in the configuration dictionary.
 
 ``` python
 import logging

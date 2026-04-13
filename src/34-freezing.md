@@ -14,9 +14,9 @@ One disadvantage of freezing is that it will increase the size of your distribut
 
 ## Alternatives to Freezing
 
-`Packaging your code <packaging-your-code-ref>`{.interpreted-text role="ref"} is for distributing libraries or tools to other developers.
+`Packaging your code <packaging-your-code-ref>` is for distributing libraries or tools to other developers.
 
-On Linux, an alternative to freezing is to `create a Linux distro package <packaging-for-linux-distributions-ref>`{.interpreted-text role="ref"} (e.g. .deb files for Debian or Ubuntu, or .rpm files for Red Hat and SuSE.)
+On Linux, an alternative to freezing is to `create a Linux distro package <packaging-for-linux-distributions-ref>` (e.g. .deb files for Debian or Ubuntu, or .rpm files for Red Hat and SuSE.)
 
 ::: todo
 Fill in "Freezing Your Code" stub
@@ -47,14 +47,14 @@ Freezing Python code on Linux into a Windows executable was only once supported 
 Note
 
 
-All solutions need a Microsoft Visual C++ to be installed on the target machine, except py2app. Only PyInstaller makes a self-executable exe that bundles the appropriate DLL when passing `--onefile` to `Configure.py`{.interpreted-text role="file"}.
+All solutions need a Microsoft Visual C++ to be installed on the target machine, except py2app. Only PyInstaller makes a self-executable exe that bundles the appropriate DLL when passing `--onefile` to `Configure.py`.
 :
 
 ## Windows
 
 ### bbFreeze
 
-Prerequisite is to install `Python, Setuptools and pywin32 dependency on Windows <install-windows>`{.interpreted-text role="ref"}.
+Prerequisite is to install `Python, Setuptools and pywin32 dependency on Windows <install-windows>`.
 
 1.  Install `bbfreeze`:
 
@@ -62,7 +62,7 @@ Prerequisite is to install `Python, Setuptools and pywin32 dependency on Windows
 $ pip install bbfreeze
 ```
 
-2.  Write most basic `bb_setup.py`{.interpreted-text role="file"}
+2.  Write most basic `bb_setup.py`
 
 ``` python
 from bbfreeze import Freezer
@@ -90,7 +90,7 @@ freezer = Freezer(distdir='dist', includes=['my_code'], excludes=['docs'])
 freezer.setIcon('my_awesome_icon.ico')
 ```
 
-4\. Provide the Microsoft Visual C++ runtime DLL for the freezer. It might be possible to append your `sys.path` with the Microsoft Visual Studio path but I find it easier to drop `msvcp90.dll`{.interpreted-text role="file"} in the same folder where your script resides.
+4\. Provide the Microsoft Visual C++ runtime DLL for the freezer. It might be possible to append your `sys.path` with the Microsoft Visual Studio path but I find it easier to drop `msvcp90.dll` in the same folder where your script resides.
 
 5.  Freeze!
 
@@ -100,10 +100,10 @@ $ python bb_setup.py
 
 ### py2exe
 
-Prerequisite is to install `Python on Windows <install-windows>`{.interpreted-text role="ref"}. The last release of py2exe is from the year 2014. There is not active development.
+Prerequisite is to install `Python on Windows <install-windows>`. The last release of py2exe is from the year 2014. There is not active development.
 
 1.  Download and install <http://sourceforge.net/projects/py2exe/files/py2exe/>
-2.  Write `setup.py`{.interpreted-text role="file"} ([List of configuration options](http://www.py2exe.org/index.cgi/ListOfOptions)):
+2.  Write `setup.py` ([List of configuration options](http://www.py2exe.org/index.cgi/ListOfOptions)):
 
 ``` python
 from distutils.core import setup
@@ -116,7 +116,7 @@ setup(
 
 3.  (Optionally) [include icon](http://www.py2exe.org/index.cgi/CustomIcons)
 4.  (Optionally) [one-file mode](https://stackoverflow.com/questions/112698/py2exe-generate-single-executable-file#113014)
-5.  Generate `.exe`{.interpreted-text role="file"} into `dist`{.interpreted-text role="file"} directory:
+5.  Generate `.exe` into `dist` directory:
 
 ``` console
 $ python setup.py py2exe
@@ -126,7 +126,7 @@ $ python setup.py py2exe
 
 ### PyInstaller
 
-Prerequisite is to have installed `Python, Setuptools and pywin32 dependency on Windows <install-windows>`{.interpreted-text role="ref"}.
+Prerequisite is to have installed `Python, Setuptools and pywin32 dependency on Windows <install-windows>`.
 
 - [Most basic tutorial](http://bojan-komazec.blogspot.com/2011/08/how-to-create-windows-executable-from.html)
 - [Manual](https://pyinstaller.readthedocs.io/en/stable/)

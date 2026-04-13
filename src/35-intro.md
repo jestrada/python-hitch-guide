@@ -12,13 +12,13 @@ Python is a general-purpose, high-level programming language similar to Tcl, Per
 
 - **extensive standard libraries and third party modules for virtually any task**
 
-  Python is sometimes described with the words "batteries included" because of its extensive [standard library](http://docs.python.org/library/), which includes modules for regular expressions, file IO, fraction handling, object serialization, and much more.
+  Python is sometimes described with the words "batteries included" because of its extensive [standard library](https://docs.python.org/library/), which includes modules for regular expressions, file IO, fraction handling, object serialization, and much more.
 
   Additionally, the [Python Package Index](https://pypi.org) is available for users to submit their packages for widespread use, similar to Perl"s [CPAN](https://www.cpan.org). There is a thriving community of very powerful Python frameworks and tools like the [Django](https://www.djangoproject.com) web framework and the [NumPy](http://numpy.scipy.org) set of math routines.
 
 - **integration with other systems**
 
-  Python can integrate with [Java libraries](http://www.jython.org), enabling it to be used with the rich Java environment that corporate programmers are used to. It can also be [extended by C or C++ modules](http://docs.python.org/extending/) when speed is of the essence.
+  Python can integrate with [Java libraries](http://www.jython.org), enabling it to be used with the rich Java environment that corporate programmers are used to. It can also be [extended by C or C++ modules](https://docs.python.org/extending/) when speed is of the essence.
 
 - **ubiquity on computers**
 
@@ -26,7 +26,7 @@ Python is a general-purpose, high-level programming language similar to Tcl, Per
 
 - **friendly community**
 
-  Python has a vibrant and large `community <the-community>`{.interpreted-text role="ref"} which maintains wikis, conferences, countless repositories, mailing lists, IRC channels, and so much more. Heck, the Python community is even helping to write this guide!
+  Python has a vibrant and large `community <the-community>` which maintains wikis, conferences, countless repositories, mailing lists, IRC channels, and so much more. Heck, the Python community is even helping to write this guide!
 
 ## About This Guide {#about-ref}
 
@@ -44,4 +44,4 @@ All contributions to the Guide are welcome, from Pythonistas of all levels. If y
 
 Contributions are welcome from everyone, whether they"re an old hand or a first-time Pythonista, and the authors to the Guide will gladly help if you have any questions about the appropriateness, completeness, or accuracy of a contribution.
 
-To get started working on The Hitchhiker"s Guide, see the `/notes/contribute`{.interpreted-text role="doc"} page.
+To get started working on The Hitchhiker"s Guide, see the `/notes/contribute` page.

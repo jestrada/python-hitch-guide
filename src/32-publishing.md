@@ -20,7 +20,7 @@ To publish your Python project on GitHub:
 2.  Create a new repo for your project.
     1.  Click on the "+" menu next to your avatar in the upper right of the page and choose "New repository".
     2.  Name it after your project and give it an SEO-friendly description.
-    3.  If you don"t have an existing project repo, choose the settings to add a README, [.gitignore]{.title-ref}, and license. Use the Python [.gitignore]{.title-ref} option.
+    3.  If you don"t have an existing project repo, choose the settings to add a README, [.gitignore], and license. Use the Python [.gitignore] option.
 3.  On the newly created repo page, click "Manage topics" and add the tags "python" and "python3" and/or "python2" as appropriate.
 4.  Include a link to your new GitHub repo in your project"s README file so people who just have the project distribution know where to find it.
 

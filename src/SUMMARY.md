@@ -6,12 +6,12 @@
 
 - [Picking a Python Interpreter](./01-picking-an-interpreter.md)
 - [Installing Python](./02-installing-python.md)
-- [Pipenv & Virtual Environments](./03-pipenv-virtualenvs.md)
+- [Package & Virtual Environment Management](./03-pipenv-virtualenvs.md)
 
 # Development Environments
 
 - [Your Development Environment](./04-dev-environment.md)
-- [Pip & Virtualenv Configuration](./05-pip-virtualenv-config.md)
+- [Package Manager Configuration](./05-pip-virtualenv-config.md)
 
 # Writing Great Python Code
 

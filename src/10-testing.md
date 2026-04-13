@@ -4,31 +4,29 @@
 
 Testing your code is very important.
 
-Getting used to writing testing code and running this code in parallel is now considered a good habit. Used wisely, this method helps to define your code"s intent more precisely and have a more decoupled architecture.
+Getting used to writing testing code and running it in parallel is now considered a good habit. Used wisely, this method helps define your code's intent more precisely and leads to a more decoupled architecture.
 
 Some general rules of testing:
 
 - A testing unit should focus on one tiny bit of functionality and prove it correct.
-- Each test unit must be fully independent. Each test must be able to run alone, and also within the test suite, regardless of the order that they are called. The implication of this rule is that each test must be loaded with a fresh dataset and may have to do some cleanup afterwards. This is usually handled by `setUp()`{.interpreted-text role="meth"} and `tearDown()`{.interpreted-text role="meth"} methods.
-- Try hard to make tests that run fast. If one single test needs more than a few milliseconds to run, development will be slowed down or the tests will not be run as often as is desirable. In some cases, tests can"t be fast because they need a complex data structure to work on, and this data structure must be loaded every time the test runs. Keep these heavier tests in a separate test suite that is run by some scheduled task, and run all other tests as often as needed.
-- Learn your tools and learn how to run a single test or a test case. Then, when developing a function inside a module, run this function"s tests frequently, ideally automatically when you save the code.
-- Always run the full test suite before a coding session, and run it again after. This will give you more confidence that you did not break anything in the rest of the code.
-- It is a good idea to implement a hook that runs all tests before pushing code to a shared repository.
-- If you are in the middle of a development session and have to interrupt your work, it is a good idea to write a broken unit test about what you want to develop next. When coming back to work, you will have a pointer to where you were and get back on track faster.
-- The first step when you are debugging your code is to write a new test pinpointing the bug. While it is not always possible to do, those bug catching tests are among the most valuable pieces of code in your project.
-- Use long and descriptive names for testing functions. The style guide here is slightly different than that of running code, where short names are often preferred. The reason is testing functions are never called explicitly. `square()` or even `sqr()` is ok in running code, but in testing code you would have names such as `test_square_of_number_2()`, `test_square_negative_number()`. These function names are displayed when a test fails, and should be as descriptive as possible.
-- When something goes wrong or has to be changed, and if your code has a good set of tests, you or other maintainers will rely largely on the testing suite to fix the problem or modify a given behavior. Therefore the testing code will be read as much as or even more than the running code. A unit test whose purpose is unclear is not very helpful in this case.
-- Another use of the testing code is as an introduction to new developers. When someone will have to work on the code base, running and reading the related testing code is often the best thing that they can do to start. They will or should discover the hot spots, where most difficulties arise, and the corner cases. If they have to add some functionality, the first step should be to add a test to ensure that the new functionality is not already a working path that has not been plugged into the interface.
+- Each test unit must be fully independent. Each test must be able to run alone and within the test suite, regardless of order. Use `setUp()` and `tearDown()` (or setup/teardown fixtures) to manage test data.
+- Try hard to make tests that run fast. If a single test needs more than a few milliseconds, development will slow down. Keep heavier tests in a separate suite.
+- Learn your tools and learn how to run a single test or test case.
+- Always run the full test suite before and after a coding session.
+- Implement a hook that runs all tests before pushing code.
+- If you're in the middle of development and have to interrupt, write a broken unit test about what you want to develop next. You'll have a pointer when you return.
+- The first step when debugging is to write a new test pinpointing the bug.
+- Use long and descriptive names for testing functions: `test_square_of_number_2()`, `test_square_negative_number()`.
+- Testing code is read as much as running code. A unit test with unclear purpose is not very helpful.
+- Testing code serves as an introduction to new developers. Running and reading tests is often the best way to learn a codebase.
 
 ## The Basics
 
 ### unittest
 
-`unittest`{.interpreted-text role="mod"} is the batteries-included test module in the Python standard library. Its API will be familiar to anyone who has used any of the JUnit/nUnit/CppUnit series of tools.
+[unittest](https://docs.python.org/3/library/unittest.html) is the batteries-included test module in the Python standard library.
 
-Creating test cases is accomplished by subclassing `unittest.TestCase`{.interpreted-text role="class"}.
-
-``` python
+```python
 import unittest
 
 def fun(x):
@@ -39,19 +37,13 @@ class MyTest(unittest.TestCase):
         self.assertEqual(fun(3), 4)
 ```
 
-As of Python 2.7 unittest also includes its own test discovery mechanisms.
-
-> [unittest in the standard library documentation](http://docs.python.org/library/unittest.html)
-
 ### Doctest
 
-The `doctest`{.interpreted-text role="mod"} module searches for pieces of text that look like interactive Python sessions in docstrings, and then executes those sessions to verify that they work exactly as shown.
+The [doctest](https://docs.python.org/3/library/doctest.html) module searches for interactive Python sessions in docstrings and verifies they work as shown.
 
-Doctests have a different use case than proper unit tests: they are usually less detailed and don"t catch special cases or obscure regression bugs. They are useful as an expressive documentation of the main use cases of a module and its components. However, doctests should run automatically each time the full test suite runs.
+Doctests are useful as expressive documentation of main use cases, though they're less detailed than proper unit tests:
 
-A simple doctest in a function:
-
-``` python
+```python
 def square(x):
     """Return the square of x.
 
@@ -60,7 +52,6 @@ def square(x):
     >>> square(-2)
     4
     """
-
     return x * x
 
 if __name__ == '__main__':
@@ -68,21 +59,19 @@ if __name__ == '__main__':
     doctest.testmod()
 ```
 
-When running this module from the command line as in `python module.py`, the doctests will run and complain if anything is not behaving as described in the docstrings.
-
 ## Tools
 
-### py.test
+### pytest (Recommended)
 
-py.test is a no-boilerplate alternative to Python"s standard unittest module.
+[pytest](https://docs.pytest.org/) is a no-boilerplate alternative to unittest. It's the most popular Python testing framework:
 
-``` console
-$ pip install pytest
+```bash
+$ uv add --dev pytest
 ```
 
-Despite being a fully-featured and extensible test tool, it boasts a simple syntax. Creating a test suite is as easy as writing a module with a couple of functions:
+Creating a test suite is as easy as writing a module with functions:
 
-``` python
+```python
 # content of test_sample.py
 def func(x):
     return x + 1
@@ -91,13 +80,13 @@ def test_answer():
     assert func(3) == 5
 ```
 
-and then running the [py.test]{.title-ref} command:
+Run with:
 
-``` console
-$ py.test
+```bash
+$ uv run pytest
 =========================== test session starts ============================
-platform darwin -- Python 2.7.1 -- pytest-2.2.1
-collecting ... collected 1 items
+platform darwin -- Python 3.13.0 -- pytest-8.3.4
+collected 1 items
 
 test_sample.py F
 
@@ -113,65 +102,46 @@ test_sample.py:5: AssertionError
 ========================= 1 failed in 0.02 seconds =========================
 ```
 
-is far less work than would be required for the equivalent functionality with the unittest module!
-
-> [py.test](https://docs.pytest.org/en/latest/)
+Far less work than the equivalent with unittest!
 
 ### Hypothesis
 
-Hypothesis is a library which lets you write tests that are parameterized by a source of examples. It then generates simple and comprehensible examples that make your tests fail, letting you find more bugs with less work.
+[Hypothesis](https://hypothesis.readthedocs.io/) lets you write tests parameterized by a source of examples. It generates simple, comprehensible examples that make your tests fail:
 
-``` console
-$ pip install hypothesis
+```bash
+$ uv add --dev hypothesis
 ```
 
-For example, testing lists of floats will try many examples, but report the minimal example of each bug (distinguished exception type and location):
+```python
+from hypothesis import given, strategies as st
 
-``` python
-@given(lists(floats(allow_nan=False, allow_infinity=False), min_size=1))
+@given(st.lists(st.floats(allow_nan=False, allow_infinity=False), min_size=1))
 def test_mean(xs):
     mean = sum(xs) / len(xs)
-    assert min(xs) <= mean(xs) <= max(xs)
+    assert min(xs) <= mean <= max(xs)
 ```
 
-``` none
-Falsifying example: test_mean(
-    xs=[1.7976321109618856e+308, 6.102390043022755e+303]
-)
-```
-
-Hypothesis is practical as well as very powerful and will often find bugs that escaped all other forms of testing. It integrates well with py.test, and has a strong focus on usability in both simple and advanced scenarios.
-
-> [hypothesis](https://hypothesis.readthedocs.io/en/latest/)
+Hypothesis will find bugs that escape all other forms of testing.
 
 ### tox
 
-tox is a tool for automating test environment management and testing against multiple interpreter configurations.
+[tox](https://tox.readthedocs.io/) automates test environment management and testing against multiple Python versions:
 
-``` console
-$ pip install tox
+```bash
+$ uv add --dev tox
 ```
 
-tox allows you to configure complicated multi-parameter test matrices via a simple INI-style configuration file.
+Configure in `pyproject.toml` or `tox.ini`. Modern alternative: [nox](https://nox.thea.codes/).
 
-> [tox](https://tox.readthedocs.io/en/latest/)
+### unittest.mock
 
-### mock
+[unittest.mock](https://docs.python.org/3/library/unittest.mock.html) is in the standard library since Python 3.3 — no installation needed.
 
-`unittest.mock`{.interpreted-text role="mod"} is a library for testing in Python. As of Python 3.3, it is available in the [standard library](https://docs.python.org/dev/library/unittest.mock).
+It allows you to replace parts of your system under test with mock objects:
 
-For older versions of Python:
+```python
+from unittest.mock import MagicMock
 
-``` console
-$ pip install mock
-```
-
-It allows you to replace parts of your system under test with mock objects and make assertions about how they have been used.
-
-For example, you can monkey-patch a method:
-
-``` python
-from mock import MagicMock
 thing = ProductionClass()
 thing.method = MagicMock(return_value=3)
 thing.method(3, 4, 5, key='value')
@@ -179,23 +149,18 @@ thing.method(3, 4, 5, key='value')
 thing.method.assert_called_with(3, 4, 5, key='value')
 ```
 
-To mock classes or objects in a module under test, use the `patch` decorator. In the example below, an external search system is replaced with a mock that always returns the same result (but only for the duration of the test).
+Use the `patch` decorator to mock classes or objects during a test:
 
-``` python
+```python
+from unittest.mock import patch
+
 def mock_search(self):
     class MockSearchQuerySet(SearchQuerySet):
         def __iter__(self):
             return iter(["foo", "bar", "baz"])
     return MockSearchQuerySet()
 
-# SearchForm here refers to the imported class reference in myapp,
-# not where the SearchForm class itself is imported from
-@mock.patch('myapp.SearchForm.search', mock_search)
+@patch('myapp.SearchForm.search', mock_search)
 def test_new_watchlist_activities(self):
-    # get_search_results runs a search and iterates over the result
     self.assertEqual(len(myapp.get_search_results(q="fish")), 3)
 ```
-
-Mock has many other ways with which you can configure and control its behaviour.
-
-> [mock](http://www.voidspace.org.uk/python/mock/)

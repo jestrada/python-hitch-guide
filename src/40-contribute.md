@@ -8,7 +8,7 @@ If you have a feature request, suggestion, or bug report, please open a new issu
 
 ## Style Guide
 
-For all contributions, please follow the `guide-style-guide`{.interpreted-text role="ref"}.
+For all contributions, please follow the `guide-style-guide`.
 
 ## Todo List {#todo-list-ref}
 

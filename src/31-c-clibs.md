@@ -15,7 +15,7 @@ ffi.cdef("size_t strlen(const char*);")
 clib = ffi.dlopen(None)
 length = clib.strlen("String to be evaluated.")
 # prints: 23
-print("{}".format(length))
+print(f"{length}")
 ```
 
 ## ctypes
@@ -24,7 +24,7 @@ print("{}".format(length))
 
 ### Struct Equivalents
 
-`MyStruct.h`{.interpreted-text role="file"}
+`MyStruct.h`
 
 ``` {.c linenos=""}
 struct my_struct {
@@ -33,7 +33,7 @@ struct my_struct {
 };
 ```
 
-`MyStruct.py`{.interpreted-text role="file"}
+`MyStruct.py`
 
 ``` {.python linenos=""}
 import ctypes
@@ -48,7 +48,7 @@ class my_struct(ctypes.Structure):
 
 ### Example: Overloading \_\_repr\_\_
 
-`MyClass.h`{.interpreted-text role="file"}
+`MyClass.h`
 
 ``` {.c++ linenos=""}
 #include <string>
@@ -60,7 +60,7 @@ public:
 };
 ```
 
-`myclass.i`{.interpreted-text role="file"}
+`myclass.i`
 
 ``` {.idl linenos=""}
 %include "string.i"

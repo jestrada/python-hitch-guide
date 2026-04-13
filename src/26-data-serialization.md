@@ -125,7 +125,7 @@ with open('/tmp/file.json', 'w') as f:
 
 ### XML (nested data)
 
-XML parsing in Python is possible using the [xml]{.title-ref} package.
+XML parsing in Python is possible using the [xml] package.
 
 Example:
 
@@ -136,7 +136,7 @@ tree = ET.parse('country_data.xml')
 root = tree.getroot()
 ```
 
-More documentation on using the [xml.dom]{.title-ref} and [xml.sax]{.title-ref} packages can be found [in the Python XML library documentation](https://docs.python.org/3/library/xml.html).
+More documentation on using the [xml.dom] and [xml.sax] packages can be found [in the Python XML library documentation](https://docs.python.org/3/library/xml.html).
 
 ## Binary
 

@@ -16,7 +16,7 @@ The mission of the Python Software Foundation is to promote, protect, and advanc
 
 PEPs are *Python Enhancement Proposals*. They describe changes to Python itself, or the standards around it.
 
-There are three different types of PEPs (as defined by `1`{.interpreted-text role="pep"}):
+There are three different types of PEPs (as defined by `1`):
 
 > 
 >
@@ -38,19 +38,19 @@ There are a few PEPs that could be considered required reading:
 
 - 
 
-  `8`{.interpreted-text role="pep"}: The Python Style Guide.
+  `8`: The Python Style Guide.
 
   :   Read this. All of it. Follow it.
 
 - 
 
-  `20`{.interpreted-text role="pep"}: The Zen of Python.
+  `20`: The Zen of Python.
 
   :   A list of 19 statements that briefly explain the philosophy behind Python.
 
 - 
 
-  `257`{.interpreted-text role="pep"}: Docstring Conventions.
+  `257`: Docstring Conventions.
 
   :   Gives guidelines for semantics and conventions associated with Python docstrings.
 

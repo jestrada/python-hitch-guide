@@ -103,7 +103,7 @@ Python"s closures are *late binding*. This means that the values of variables us
 
 Here, whenever *any* of the returned functions are called, the value of `i` is looked up in the surrounding scope at call time. By then, the loop has completed and `i` is left with its final value of 4.
 
-What"s particularly nasty about this gotcha is the seemingly prevalent misinformation that this has something to do with `lambdas <python:lambda>`{.interpreted-text role="ref"} in Python. Functions created with a `lambda` expression are in no way special, and in fact the same exact behavior is exhibited by just using an ordinary `def`:
+What"s particularly nasty about this gotcha is the seemingly prevalent misinformation that this has something to do with `lambdas <python:lambda>` in Python. Functions created with a `lambda` expression are in no way special, and in fact the same exact behavior is exhibited by just using an ordinary `def`:
 
 ``` python
 def create_multipliers():
@@ -119,7 +119,7 @@ def create_multipliers():
 
 ### What You Should Do Instead
 
-The most general solution is arguably a bit of a hack. Due to Python"s aforementioned behavior concerning evaluating default arguments to functions (see `default_args`{.interpreted-text role="ref"}), you can create a closure that binds immediately to its arguments by using a default arg like so:
+The most general solution is arguably a bit of a hack. Due to Python"s aforementioned behavior concerning evaluating default arguments to functions (see `default_args`), you can create a closure that binds immediately to its arguments by using a default arg like so:
 
 ``` python
 def create_multipliers():

@@ -14,17 +14,17 @@ The [Python Packaging Guide](https://python-packaging-user-guide.readthedocs.io/
 
 ## Alternatives to Packaging
 
-To distribute applications to end-users, you should `freeze your application <freezing-your-code-ref>`{.interpreted-text role="ref"}.
+To distribute applications to end-users, you should `freeze your application <freezing-your-code-ref>`.
 
-On Linux, you may also want to consider `creating a Linux distro package <packaging-for-linux-distributions-ref>`{.interpreted-text role="ref"} (e.g. a .deb file for Debian or Ubuntu.)
+On Linux, you may also want to consider `creating a Linux distro package <packaging-for-linux-distributions-ref>` (e.g. a .deb file for Debian or Ubuntu.)
 
 ## For Python Developers
 
-If you"re writing an open source Python module, [PyPI](http://pypi.org) , more properly known as *The Cheeseshop*, is the place to host it.
+If you"re writing an open source Python module, [PyPI](https://pypi.org) , more properly known as *The Cheeseshop*, is the place to host it.
 
 ### Pip vs. easy_install
 
-Use [pip](http://pypi.org/project/pip). More details [here](https://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install).
+Use [pip](https://pypi.org/project/pip). More details [here](https://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install).
 
 ### Personal PyPI
 
@@ -32,7 +32,7 @@ If you want to install packages from a source other than PyPI (say, if your pack
 
 **Showing an example is always beneficial**
 
-For example, if you want to install a package called `MyPackage.tar.gz`{.interpreted-text role="file"}, and assuming this is your directory structure:
+For example, if you want to install a package called `MyPackage.tar.gz`, and assuming this is your directory structure:
 
 - 
 
@@ -57,7 +57,7 @@ This runs a simple HTTP server running on port 9000 and will list all packages (
 $ pip install --extra-index-url=http://127.0.0.1:9000/ MyPackage
 ```
 
-Having a folder with the same name as the package name is **crucial** here. I got fooled by that, one time. But if you feel that creating a folder called `MyPackage`{.interpreted-text role="file"} and keeping `MyPackage.tar.gz`{.interpreted-text role="file"} inside that is *redundant*, you can still install MyPackage using:
+Having a folder with the same name as the package name is **crucial** here. I got fooled by that, one time. But if you feel that creating a folder called `MyPackage` and keeping `MyPackage.tar.gz` inside that is *redundant*, you can still install MyPackage using:
 
 ``` console
 $ pip install  http://127.0.0.1:9000/MyPackage.tar.gz
@@ -83,7 +83,7 @@ One simple option for a personal PyPI server is to use Amazon S3. A prerequisite
 
 4.  **Upload the new files**
 
-- Use a client like Cyberduck to sync the entire `packages`{.interpreted-text role="file"} folder to your s3 bucket.
+- Use a client like Cyberduck to sync the entire `packages` folder to your s3 bucket.
 - Make sure you upload `packages/simple/index.html` as well as all new files and directories.
 
 5.  **Fix new file permissions**
@@ -100,16 +100,16 @@ One simple option for a personal PyPI server is to use Amazon S3. A prerequisite
 
 Creating a Linux distro package is arguably the "right way" to distribute code on Linux.
 
-Because a distribution package doesn"t include the Python interpreter, it makes the download and install about 2-12 MB smaller than `freezing your application <freezing-your-code-ref>`{.interpreted-text role="ref"}.
+Because a distribution package doesn"t include the Python interpreter, it makes the download and install about 2-12 MB smaller than `freezing your application <freezing-your-code-ref>`.
 
 Also, if a distribution releases a new security update for Python, then your application will automatically start using that new version of Python.
 
 The bdist_rpm command makes [producing an RPM file](https://docs.python.org/3/distutils/builtdist.html#creating-rpm-packages) for use by distributions like Red Hat or SuSE trivially easy.
 
 However, creating and maintaining the different configurations required for each distribution"s format (e.g. .deb for Debian/Ubuntu, .rpm for Red Hat/Fedora, etc.) is a fair amount of work. If your code is an application that you plan to distribute on other platforms, then you"ll also have to create and maintain the separate config required to freeze your application for Windows and OS X. It would be much less work to simply create and maintain a single config for one of the cross platform `freezing tools
-<freezing-your-code-ref>`{.interpreted-text role="ref"}, which will produce stand-alone executables for all distributions of Linux, as well as Windows and OS X.
+<freezing-your-code-ref>`, which will produce stand-alone executables for all distributions of Linux, as well as Windows and OS X.
 
-Creating a distribution package is also problematic if your code is for a version of Python that isn"t currently supported by a distribution. Having to tell *some versions* of Ubuntu end-users that they need to add [the "dead-snakes" PPA](https://launchpad.net/~fkrull/+archive/ubuntu/deadsnakes) using [sudo apt-repository]{.title-ref} commands before they can install your .deb file makes for an extremely hostile user experience. Not only that, but you"d have to maintain a custom equivalent of these instructions for every distribution, and worse, have your users read, understand, and act on them.
+Creating a distribution package is also problematic if your code is for a version of Python that isn"t currently supported by a distribution. Having to tell *some versions* of Ubuntu end-users that they need to add [the "dead-snakes" PPA](https://launchpad.net/~fkrull/+archive/ubuntu/deadsnakes) using [sudo apt-repository] commands before they can install your .deb file makes for an extremely hostile user experience. Not only that, but you"d have to maintain a custom equivalent of these instructions for every distribution, and worse, have your users read, understand, and act on them.
 
 Having said all that, here"s how to do it:
 

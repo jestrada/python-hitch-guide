@@ -22,13 +22,16 @@ Some popular command-line applications include:
 
 ## Plac
 
-[Plac](https://pypi.org/project/plac) is a simple wrapper over the Python standard library [argparse](http://docs.python.org/2/library/argparse.html), which hides most of its complexity by using a declarative interface: the argument parser is inferred rather than written down imperatively. This module targets unsophisticated users, programmers, sysadmins, scientists, and in general people writing throw-away scripts for themselves, who choose to create a command-line interface because it is quick and simple.
+[Plac](https://pypi.org/project/plac) is a simple wrapper over the Python standard library [argparse](https://docs.python.org/2/library/argparse.html), which hides most of its complexity by using a declarative interface: the argument parser is inferred rather than written down imperatively. This module targets unsophisticated users, programmers, sysadmins, scientists, and in general people writing throw-away scripts for themselves, who choose to create a command-line interface because it is quick and simple.
 
 ## Cliff
 
 [Cliff](http://docs.openstack.org/developer/cliff/) is a framework for building command-line programs. It uses setuptools entry points to provide subcommands, output formatters, and other extensions. The framework is meant to be used to create multi-level commands such as `svn` and `git`, where the main program handles some basic argument parsing and then invokes a sub-command to do the work.
 
 ## Cement
+
+[typer](https://typer.tiangolo.com/) is a library for building CLI applications based on Python type hints. It automatically generates help text, shell completion, and validates input. Built on top of Click, it is the modern recommended way to build CLI apps in Python.
+
 
 [Cement](http://builtoncement.com/) is an advanced CLI Application Framework. Its goal is to introduce a standard and feature-full platform for both simple and complex command line applications as well as support rapid development needs without sacrificing quality. Cement is flexible, and its use cases span from the simplicity of a micro-framework to the complexity of a mega-framework.
 

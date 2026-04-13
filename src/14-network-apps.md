@@ -8,12 +8,12 @@ The Hypertext Transfer Protocol (HTTP) is an application protocol for distribute
 
 ### Requests
 
-Python's standard urllib2 module provides most of the HTTP capabilities you need, but the API is thoroughly broken. It was built for a different time --- and a different web. It requires an enormous amount of work (even method overrides) to perform the simplest of tasks.
+Python's standard library provides urllib.request for HTTP, but the API is verbose. For most use cases, a third-party library is recommended.
 
 Requests takes all of the work out of Python HTTP --- making your integration with web services seamless. There's no need to manually add query strings to your URLs, or to form-encode your POST data. Keep-alive and HTTP connection pooling are 100% automatic, powered by urllib3, which is embedded within Requests.
 
 - [Documentation](https://requests.readthedocs.io/en/latest/)
-- [PyPi](http://pypi.org/project/requests)
+- [PyPi](https://pypi.org/project/requests)
 - [GitHub](https://github.com/kennethreitz/requests)
 
 ## Distributed Systems

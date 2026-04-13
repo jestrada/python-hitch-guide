@@ -17,7 +17,7 @@ Read the Docs is a popular community project that hosts documentation for open s
 
 ## pydoc
 
-`pydoc`{.interpreted-text role="program"} is a utility that is installed when you install Python. It allows you to quickly retrieve and search for documentation from your shell. For example, if you needed a quick refresher on the `time`{.interpreted-text role="mod"} module, pulling up documentation would be as simple as:
+`pydoc` is a utility that is installed when you install Python. It allows you to quickly retrieve and search for documentation from your shell. For example, if you needed a quick refresher on the `time` module, pulling up documentation would be as simple as:
 
 > ``` console
 > $ pydoc time

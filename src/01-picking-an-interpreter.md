@@ -1,80 +1,80 @@
-# Picking a Python Interpreter (3 vs 2)
+# Choosing a Python Interpreter
 
-![image](https://docs.python-guide.org/_static/photos/34484834733_5b80f65ab1_k_d.jpg)
+Python is not just a language — it's a specification with multiple implementations. Choosing the right interpreter depends on your project's needs: compatibility, performance, and ecosystem.
 
-## The State of Python (3 & 2)
+## CPython (Recommended)
 
-When choosing a Python interpreter, one looming question is always present: "Should I choose Python 2 or Python 3"? The answer is a bit more subtle than one might think.
+[CPython](https://www.python.org/) is the reference implementation of Python, written in C. It compiles Python code to intermediate bytecode which is then interpreted by a virtual machine. CPython provides the highest level of compatibility with Python packages and C extension modules.
 
-The basic gist of the state of things is as follows:
+**Use CPython unless you have a specific reason not to.** It's the standard, the most widely tested, and what the vast majority of the Python ecosystem targets.
 
-1. Most production applications today use Python 3.
-2. Python 3 is ready for the production deployment of applications today.
-3. Python 2 reached the end of its life on January 1, 2020 [\[1\]](https://www.python.org/dev/peps/pep-0373/#id2).
-4. The brand name "Python" encapsulates both Python 3 and Python 2.
+- If you are writing open source Python code and want to reach the widest possible audience, targeting CPython is best.
+- To use packages which rely on C extensions to function, CPython is your only practical option.
+- All versions of the Python language are defined by CPython's behavior since it is the reference implementation.
 
-## Recommendations
+**Current recommended version:** Python 3.12 or 3.13. Each new version brings improved standard library modules, performance gains, security fixes, and better error messages. Python 3.13 introduced a free-threaded build (no-GIL) as an experimental feature.
 
-> **Note:** The use of **Python 3** is *highly* recommended over Python 2. Consider upgrading your applications and infrastructure if you find yourself *still* using Python 2 in production today. If you are using Python 3, congratulations — you are indeed a person of excellent taste. — *Kenneth Reitz*
+Install the latest version with [uv](https://docs.astral.sh/uv/):
 
-I'll be blunt:
+```bash
+$ uv python install 3.13
+```
 
-- Use Python 3 for new Python applications.
-- If you're learning Python for the first time, familiarizing yourself with Python 2.7 will be very useful, but not more useful than learning Python 3.
-- Learn both. They are both "Python".
+Or use [pyenv](https://github.com/pyenv/pyenv) if you need to manage multiple versions:
 
-## So.... 3?
+```bash
+$ pyenv install 3.13
+```
 
-If you're choosing a Python interpreter to use, I recommend you use the newest Python 3.x, since every version brings new and improved standard library modules, security and bug fixes.
+## PyPy
 
-Given such, only use Python 2 if you have a strong reason to, such as a pre-existing code-base, a Python 2 exclusive library, simplicity/familiarity, or, of course, you absolutely love and are inspired by Python 2. No harm in that.
+[PyPy](https://pypy.org/) is a Python interpreter implemented in a restricted statically-typed subset of the Python language called RPython. The interpreter features a just-in-time (JIT) compiler and supports multiple back-ends (C, CLI, JVM).
 
-[Further Reading](http://wiki.python.org/moin/Python2orPython3)
+PyPy aims for maximum compatibility with CPython while significantly improving performance. On a suite of benchmarks, it's consistently [5x or more faster than CPython](https://speed.pypy.org/).
 
-It is possible to [write code that works on Python 2.6, 2.7, and Python 3](https://docs.python.org/3/howto/pyporting.html). This ranges from trivial to hard depending upon the kind of software you are writing; if you're a beginner there are far more important things to worry about.
+If you have a CPU-bound Python application and need a performance boost without rewriting code, PyPy is worth trying. It targets modern Python 3.x.
 
-## Implementations
+**Caveat:** Some C extension packages may not work with PyPy. Test your dependencies first.
 
-When people speak of *Python* they often mean not just the language but also the CPython implementation. *Python* is actually a specification for a language that can be implemented in many different ways.
+## GraalPy
 
-### CPython
+[GraalPy](https://www.graalvm.org/python/) is a Python implementation built on Oracle's GraalVM. It provides high performance through GraalVM's JIT compiler and offers seamless interoperability with Java, JavaScript, Ruby, and other GraalVM-supported languages.
 
-[CPython](http://www.python.org) is the reference implementation of Python, written in C. It compiles Python code to intermediate bytecode which is then interpreted by a virtual machine. CPython provides the highest level of compatibility with Python packages and C extension modules.
+GraalPy is a good choice when:
 
-If you are writing open source Python code and want to reach the widest possible audience, targeting CPython is best. To use packages which rely on C extensions to function, CPython is your only implementation option.
+- You need to embed Python in a JVM application
+- You want polyglot interoperability between Python and other languages
+- You're running in a GraalVM environment already
 
-All versions of the Python language are implemented in C because CPython is the reference implementation.
+It targets Python 3.x compatibility and is actively developed.
 
-### PyPy
+## Jython
 
-[PyPy](http://pypy.org/) is a Python interpreter implemented in a restricted statically-typed subset of the Python language called RPython. The interpreter features a just-in-time compiler and supports multiple back-ends (C, CLI, JVM).
+[Jython](https://www.jython.org/) compiles Python code to Java bytecode which is then executed by the JVM. It can import and use any Java class like a Python module.
 
-PyPy aims for maximum compatibility with the reference CPython implementation while improving performance.
+Jython is useful if you need to interface with an existing Java codebase or have other reasons to write Python code for the JVM. However, note that Jython only supports Python 2.7 and development has slowed considerably. For new JVM-based Python work, consider GraalPy instead.
 
-If you are looking to increase performance of your Python code, it's worth giving PyPy a try. On a suite of benchmarks, it's currently [over 5 times faster than CPython](http://speed.pypy.org/).
+## IronPython
 
-PyPy supports Python 2.7. PyPy3 [\[2\]](https://pypy.org/compat.html), released in beta, targets Python 3.
+[IronPython](https://ironpython.net/) is an implementation of Python for the .NET framework. It can use both Python and .NET framework libraries, and can expose Python code to other .NET languages.
 
-### Jython
+IronPython supports Python 2.7, with IronPython 3 under development. It remains useful for specific .NET integration scenarios.
 
-[Jython](http://www.jython.org/) is a Python implementation that compiles Python code to Java bytecode which is then executed by the JVM (Java Virtual Machine). Additionally, it is able to import and use any Java class like a Python module.
+## Python for .NET (pythonnet)
 
-If you need to interface with an existing Java codebase or have other reasons to need to write Python code for the JVM, Jython is the best choice.
+[Python for .NET](https://pythonnet.github.io/) takes a different approach from IronPython — it provides near-seamless integration of a natively installed CPython with the .NET Common Language Runtime (CLR). This lets you use standard CPython with full package ecosystem access while also calling into .NET libraries.
 
-Jython currently supports up to Python 2.7. [\[3\]](https://hg.python.org/jython/file/412a8f9445f7/NEWS)
+It is compatible with Python 3.x and can run alongside IronPython without conflict.
 
-### IronPython
+## Which Should You Use?
 
-[IronPython](http://ironpython.net/) is an implementation of Python for the .NET framework. It can use both Python and .NET framework libraries, and can also expose Python code to other languages in the .NET framework.
+| Implementation | Best For | Python 3 Support |
+|---|---|---|
+| **CPython** | General purpose — use by default | ✅ Latest |
+| **PyPy** | CPU-bound workloads needing speed | ✅ Yes |
+| **GraalPy** | JVM/polyglot environments | ✅ Yes |
+| **Jython** | Legacy Java integration | ❌ Python 2.7 only |
+| **IronPython** | .NET integration | ⚠️ Python 2.7 (v3 in dev) |
+| **pythonnet** | .NET integration with CPython packages | ✅ Yes |
 
-[Python Tools for Visual Studio](http://ironpython.net/tools/) integrates IronPython directly into the Visual Studio development environment, making it an ideal choice for Windows developers.
-
-IronPython supports Python 2.7. [\[4\]](https://ironpython.net/download/) IronPython 3 [\[5\]](https://github.com/IronLanguages/ironpython3) is being developed, but is not ready for use as of September 2020.
-
-### PythonNet
-
-[Python for .NET](http://pythonnet.github.io/) is a package which provides near seamless integration of a natively installed Python installation with the .NET Common Language Runtime (CLR). This is the inverse approach to that taken by IronPython (see above), to which it is more complementary than competing with.
-
-In conjunction with Mono, pythonnet enables native Python installations on non-Windows operating systems, such as OS X and Linux, to operate within the .NET framework. It can be run in addition to IronPython without conflict.
-
-Pythonnet is compatible with Python 2.7 and 3.5-3.8. [\[6\]](https://pythonnet.github.io/)
+When in doubt, use CPython. It's what the vast majority of Python developers use, what CI systems expect, and what package authors test against.

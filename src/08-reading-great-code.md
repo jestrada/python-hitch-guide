@@ -4,21 +4,14 @@
 
 One of the secrets of becoming a great Python programmer is to read, understand, and comprehend excellent code.
 
-Excellent code typically follows the guidelines outlined in `code_style`{.interpreted-text role="ref"}, and does its best to express a clear and concise intent to the reader.
+Excellent code typically follows the guidelines outlined in [Code Style](./07-code-style.md), and does its best to express a clear and concise intent to the reader.
 
-Included below is a list of recommended Python projects for reading. Each one of these projects is a paragon of Python coding.
+Here is a list of recommended Python projects for reading. Each one is a paragon of Python coding.
 
-- [Howdoi](https://github.com/gleitz/howdoi) Howdoi is a code search tool, written in Python.
-- [Flask](https://github.com/mitsuhiko/flask) Flask is a microframework for Python based on Werkzeug and Jinja2. It"s intended for getting started very quickly and was developed with best intentions in mind.
-- [Diamond](https://github.com/python-diamond/Diamond) Diamond is a Python daemon that collects metrics and publishes them to Graphite or other backends. It is capable of collecting CPU, memory, network, I/O, load, and disk metrics. Additionally, it features an API for implementing custom collectors for gathering metrics from almost any source.
-- [Werkzeug](https://github.com/mitsuhiko/werkzeug) Werkzeug started as a simple collection of various utilities for WSGI applications and has become one of the most advanced WSGI utility modules. It includes a powerful debugger, full-featured request and response objects, HTTP utilities to handle entity tags, cache control headers, HTTP dates, cookie handling, file uploads, a powerful URL routing system, and a bunch of community-contributed addon modules.
-- [Requests](https://github.com/kennethreitz/requests) Requests is an Apache2 Licensed HTTP library, written in Python, for human beings.
-- [Tablib](https://github.com/jazzband/tablib) Tablib is a format-agnostic tabular dataset library, written in Python.
-
-::: todo
-Include code examples of exemplary code from each of the projects listed. Explain why it is excellent code. Use complex examples.
-
-
-::: todo
-Explain techniques to rapidly identify data structures and algorithms and determine what the code is doing.
-
+- [Howdoi](https://github.com/gleitz/howdoi) — a code search tool written in Python.
+- [Flask](https://github.com/pallets/flask) — a microframework for Python based on Werkzeug and Jinja2.
+- [Requests](https://github.com/psf/requests) — an Apache2 Licensed HTTP library for human beings.
+- [Tablib](https://github.com/jazzband/tablib) — a format-agnostic tabular dataset library.
+- [httpx](https://github.com/encode/httpx) — a next-generation HTTP client for Python.
+- [Rich](https://github.com/Textualize/rich) — a library for rich text and beautiful formatting in the terminal.
+- [Pydantic](https://github.com/pydantic/pydantic) — data validation using Python type hints.

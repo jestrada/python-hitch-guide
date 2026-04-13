@@ -8,7 +8,7 @@ As a powerful scripting language adapted to both fast prototyping and bigger pro
 
 ### WSGI
 
-The Web Server Gateway Interface (or "WSGI" for short) is a standard interface between web servers and Python web application frameworks. By standardizing behavior and communication between web servers and Python web frameworks, WSGI makes it possible to write portable Python web code that can be deployed in any `WSGI-compliant web server <wsgi-servers-ref>`{.interpreted-text role="ref"}. WSGI is documented in `3333`{.interpreted-text role="pep"}.
+The Web Server Gateway Interface (or "WSGI" for short) is a standard interface between web servers and Python web application frameworks. By standardizing behavior and communication between web servers and Python web frameworks, WSGI makes it possible to write portable Python web code that can be deployed in any `WSGI-compliant web server <wsgi-servers-ref>`. WSGI is documented in `3333`.
 
 ## Frameworks
 
@@ -126,7 +126,7 @@ I do not recommend using uWSGI unless you know why you need it.
 
 ## Server Best Practices {#server-best-practices-ref}
 
-The majority of self-hosted Python applications today are hosted with a WSGI server such as `Gunicorn <gunicorn-ref>`{.interpreted-text role="ref"}, either directly or behind a lightweight web server such as `nginx <nginx-ref>`{.interpreted-text role="ref"}.
+The majority of self-hosted Python applications today are hosted with a WSGI server such as `Gunicorn <gunicorn-ref>`, either directly or behind a lightweight web server such as `nginx <nginx-ref>`.
 
 The WSGI servers serve the Python applications while the web server handles tasks better suited for it such as static file serving, request routing, DDoS protection, and basic authentication.
 
@@ -221,7 +221,7 @@ if __name__ == "__main__":
     tornado.ioloop.IOLoop.instance().start()
 ```
 
-The `base.html`{.interpreted-text role="file"} file can be used as base for all site pages which are for example implemented in the content block.
+The `base.html` file can be used as base for all site pages which are for example implemented in the content block.
 
 ``` html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
@@ -244,7 +244,7 @@ The `base.html`{.interpreted-text role="file"} file can be used as base for all 
 </body>
 ```
 
-The next listing is our site page (`site.html`{.interpreted-text role="file"}) loaded in the Python app which extends `base.html`{.interpreted-text role="file"}. The content block is automatically set into the corresponding block in the `base.html`{.interpreted-text role="file"} page.
+The next listing is our site page (`site.html`) loaded in the Python app which extends `base.html`. The content block is automatically set into the corresponding block in the `base.html` page.
 
 ``` html
 {% extends "base.html" %}
@@ -290,7 +290,7 @@ The basic TAL language is simple enough to grasp from an example:
 </html>
 ```
 
-The [\<span tal:replace="expression" /\>]{.title-ref} pattern for text insertion is common enough that if you do not require strict validity in your unrendered templates, you can replace it with a more terse and readable syntax that uses the pattern [\${expression}]{.title-ref}, as follows:
+The [\<span tal:replace="expression" /\>] pattern for text insertion is common enough that if you do not require strict validity in your unrendered templates, you can replace it with a more terse and readable syntax that uses the pattern [\${expression}], as follows:
 
 ``` html
 <html>
@@ -307,7 +307,7 @@ The [\<span tal:replace="expression" /\>]{.title-ref} pattern for text insertion
 </html>
 ```
 
-But keep in mind that the full [\<span tal:replace="expression"\>Default Text\</span\>]{.title-ref} syntax also allows for default content in the unrendered template.
+But keep in mind that the full [\<span tal:replace="expression"\>Default Text\</span\>] syntax also allows for default content in the unrendered template.
 
 Being from the Pyramid world, Chameleon is not widely used.
 

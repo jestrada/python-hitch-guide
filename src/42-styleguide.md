@@ -4,7 +4,7 @@
 
 As with all documentation, having a consistent format helps make the document more understandable. In order to make The Guide easier to digest, all contributions should fit within the rules of this style guide where appropriate.
 
-The Guide is written as `restructuredtext-ref`{.interpreted-text role="ref"}.
+The Guide is written as `restructuredtext-ref`.
 
 > **Note:**
 
@@ -25,7 +25,7 @@ On any page of the rendered HTML you can click "Show Source" to see how authors 
 ## Relevancy
 
 Strive to keep any contributions relevant to the `purpose of The Guide
-<about-ref>`{.interpreted-text role="ref"}.
+<about-ref>`.
 
 - Avoid including too much information on subjects that don"t directly relate to Python development.
 - Prefer to link to other sources if the information is already out there. Be sure to describe what and why you are linking.
@@ -167,7 +167,7 @@ Warnings:
 
 ## TODOs
 
-Please mark any incomplete areas of The Guide with a [todo directive](https://www.sphinx-doc.org/en/master/usage/extensions/todo.html). To avoid cluttering the `todo-list-ref`{.interpreted-text role="ref"}, use a single `todo` for stub documents or large incomplete sections.
+Please mark any incomplete areas of The Guide with a [todo directive](https://www.sphinx-doc.org/en/master/usage/extensions/todo.html). To avoid cluttering the `todo-list-ref`, use a single `todo` for stub documents or large incomplete sections.
 
 ``` rest
 .. todo::

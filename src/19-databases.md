@@ -4,7 +4,7 @@
 
 ## DB-API
 
-The Python Database API (DB-API) defines a standard interface for Python database access modules. It"s documented in `249`{.interpreted-text role="pep"}. Nearly all Python database modules such as [sqlite3]{.title-ref}, [psycopg]{.title-ref}, and [mysql-python]{.title-ref} conform to this interface.
+The Python Database API (DB-API) defines a standard interface for Python database access modules. It"s documented in `249`. Nearly all Python database modules such as [sqlite3], [psycopg], and [mysql-python] conform to this interface.
 
 Tutorials that explain how to work with modules that conform to this interface can be found [here](http://halfcooked.com/presentations/osdc2006/python_databases.html) and [here](http://web.archive.org/web/20120815130844/http://www.amk.ca/python/writing/DB-API.html).
 
@@ -56,4 +56,4 @@ The basics:
 
 ## SQLObject
 
-[SQLObject](http://www.sqlobject.org/) is yet another ORM. It supports a wide variety of databases: common database systems like MySQL, PostgreSQL, and SQLite and more exotic systems like SAP DB, SyBase, and Microsoft SQL Server. It only supports Python 2 from Python 2.6 upwards.
+[SQLObject](http://www.sqlobject.org/) is yet another ORM. It supports a wide variety of databases: common database systems like MySQL, PostgreSQL, and SQLite and more exotic systems like SAP DB, SyBase, and Microsoft SQL Server. 

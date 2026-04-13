@@ -121,7 +121,7 @@ def primes(kmax):
     result = []
 ```
 
-What is the difference? In the upper Cython version you can see the declaration of the variable types and the integer array in a similar way as in standard C. For example [cdef int n,k,i]{.title-ref} in line 3. This additional type declaration (i.e. integer) allows the Cython compiler to generate more efficient C code from the second version. While standard Python code is saved in `*.py`{.interpreted-text role="file"} files, Cython code is saved in `*.pyx`{.interpreted-text role="file"} files.
+What is the difference? In the upper Cython version you can see the declaration of the variable types and the integer array in a similar way as in standard C. For example [cdef int n,k,i] in line 3. This additional type declaration (i.e. integer) allows the Cython compiler to generate more efficient C code from the second version. While standard Python code is saved in `*.py` files, Cython code is saved in `*.pyx` files.
 
 What"s the difference in speed? Let"s try it!
 
@@ -153,7 +153,7 @@ import pyximport
 pyximport.install()
 ```
 
-The [pyximport]{.title-ref} module allows you to import `*.pyx`{.interpreted-text role="file"} files (e.g., `primesCy.pyx`{.interpreted-text role="file"}) with the Cython-compiled version of the [primes]{.title-ref} function. The [pyximport.install()]{.title-ref} command allows the Python interpreter to start the Cython compiler directly to generate C code, which is automatically compiled to a `*.so`{.interpreted-text role="file"} C library. Cython is then able to import this library for you in your Python code, easily and efficiently. With the [time.time()]{.title-ref} function you are able to compare the time between these 2 different calls to find 500 prime numbers. On a standard notebook (dual core AMD E-450 1.6 GHz), the measured values are:
+The [pyximport] module allows you to import `*.pyx` files (e.g., `primesCy.pyx`) with the Cython-compiled version of the [primes] function. The [pyximport.install()] command allows the Python interpreter to start the Cython compiler directly to generate C code, which is automatically compiled to a `*.so` C library. Cython is then able to import this library for you in your Python code, easily and efficiently. With the [time.time()] function you are able to compare the time between these 2 different calls to find 500 prime numbers. On a standard notebook (dual core AMD E-450 1.6 GHz), the measured values are:
 
 ``` console
 Cython time: 0.0054 seconds
@@ -179,13 +179,13 @@ Python time: 0.3302 seconds
 
 The [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) module is a module in the standard library that provides a "high-level interface for asynchronously executing callables". It abstracts away a lot of the more complicated details about using multiple threads or processes for concurrency, and allows the user to focus on accomplishing the task at hand.
 
-The [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) module exposes two main classes, the [ThreadPoolExecutor]{.title-ref} and the [ProcessPoolExecutor]{.title-ref}. The ThreadPoolExecutor will create a pool of worker threads that a user can submit jobs to. These jobs will then be executed in another thread when the next worker thread becomes available.
+The [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) module exposes two main classes, the [ThreadPoolExecutor] and the [ProcessPoolExecutor]. The ThreadPoolExecutor will create a pool of worker threads that a user can submit jobs to. These jobs will then be executed in another thread when the next worker thread becomes available.
 
 The ProcessPoolExecutor works in the same way, except instead of using multiple threads for its workers, it will use multiple processes. This makes it possible to side-step the GIL; however, because of the way things are passed to worker processes, only picklable objects can be executed and returned.
 
 Because of the way the GIL works, a good rule of thumb is to use a ThreadPoolExecutor when the task being executed involves a lot of blocking (i.e. making requests over the network) and to use a ProcessPoolExecutor executor when the task is computationally expensive.
 
-There are two main ways of executing things in parallel using the two Executors. One way is with the [map(func, iterables)]{.title-ref} method. This works almost exactly like the builtin [map()]{.title-ref} function, except it will execute everything in parallel.
+There are two main ways of executing things in parallel using the two Executors. One way is with the [map(func, iterables)] method. This works almost exactly like the builtin [map()] function, except it will execute everything in parallel.
 
 ``` python
 from concurrent.futures import ThreadPoolExecutor
@@ -204,7 +204,7 @@ for page in pool.map(get_webpage, my_urls):
     print(page.text)
 ```
 
-For even more control, the [submit(func, \*args, \*\*kwargs)]{.title-ref} method will schedule a callable to be executed ( as [func(\*args, \*\*kwargs)]{.title-ref}) and returns a [Future](https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future) object that represents the execution of the callable.
+For even more control, the [submit(func, \*args, \*\*kwargs)] method will schedule a callable to be executed ( as [func(\*args, \*\*kwargs)]) and returns a [Future](https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Future) object that represents the execution of the callable.
 
 The Future object provides various methods that can be used to check on the progress of the scheduled callable. These include:
 
@@ -230,11 +230,11 @@ result()
 
 exception()
 
-:   Return the exception raised by the call. If no exception was raised then this returns None. Note that this will block just like [result()]{.title-ref}.
+:   Return the exception raised by the call. If no exception was raised then this returns None. Note that this will block just like [result()].
 
 add_done_callback(fn)
 
-:   Attach a callback function that will be executed (as [fn(future)]{.title-ref}) when the scheduled callable returns.
+:   Attach a callback function that will be executed (as [fn(future)]) when the scheduled callable returns.
 
 ``` python
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -273,9 +273,9 @@ for number, result in as_completed(futures):
         print("{} is not prime".format(number))
 ```
 
-The [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) module contains two helper functions for working with Futures. The [as_completed(futures)]{.title-ref} function returns an iterator over the list of futures, yielding the futures as they complete.
+The [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) module contains two helper functions for working with Futures. The [as_completed(futures)] function returns an iterator over the list of futures, yielding the futures as they complete.
 
-The [wait(futures)]{.title-ref} function will simply block until all futures in the list of futures provided have completed.
+The [wait(futures)] function will simply block until all futures in the list of futures provided have completed.
 
 For more information, on using the [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) module, consult the official documentation.
 
@@ -283,7 +283,7 @@ For more information, on using the [concurrent.futures](https://docs.python.org/
 
 The standard library comes with a [threading](https://docs.python.org/3/library/threading.html) module that allows a user to work with multiple threads manually.
 
-Running a function in another thread is as simple as passing a callable and its arguments to [Thread]{.title-ref}"s constructor and then calling \`start()\`:
+Running a function in another thread is as simple as passing a callable and its arguments to [Thread]"s constructor and then calling \`start()\`:
 
 ``` python
 from threading import Thread
@@ -303,7 +303,7 @@ To wait until the thread has terminated, call \`join()\`:
 some_thread.join()
 ```
 
-After calling [join()]{.title-ref}, it is always a good idea to check whether the thread is still alive (because the join call timed out):
+After calling [join()], it is always a good idea to check whether the thread is still alive (because the join call timed out):
 
 ``` python
 if some_thread.is_alive():
@@ -314,7 +314,7 @@ else:
 
 Because multiple threads have access to the same section of memory, sometimes there might be situations where two or more threads are trying to write to the same resource at the same time or where the output is dependent on the sequence or timing of certain events. This is called a [data race](https://en.wikipedia.org/wiki/Race_condition) or race condition. When this happens, the output will be garbled or you may encounter problems which are difficult to debug. A good example is this [Stack Overflow post](https://stackoverflow.com/questions/26688424/python-threads-are-printing-at-the-same-time-messing-up-the-text-output).
 
-The way this can be avoided is by using a [Lock](https://docs.python.org/3/library/threading.html#lock-objects) that each thread needs to acquire before writing to a shared resource. Locks can be acquired and released through either the contextmanager protocol ([with]{.title-ref} statement), or by using [acquire()]{.title-ref} and [release()]{.title-ref} directly. Here is a (rather contrived) example:
+The way this can be avoided is by using a [Lock](https://docs.python.org/3/library/threading.html#lock-objects) that each thread needs to acquire before writing to a shared resource. Locks can be acquired and released through either the contextmanager protocol ([with] statement), or by using [acquire()] and [release()] directly. Here is a (rather contrived) example:
 
 ``` python
 from threading import Lock, Thread
@@ -342,7 +342,7 @@ for website in websites:
     t.start()
 ```
 
-Here, we have a bunch of threads checking for changes on a list of sites and whenever there are any changes, they attempt to write those changes to a file by calling [log(changes)]{.title-ref}. When [log()]{.title-ref} is called, it will wait to acquire the lock with [with file_lock:]{.title-ref}. This ensures that at any one time, only one thread is writing to the file.
+Here, we have a bunch of threads checking for changes on a list of sites and whenever there are any changes, they attempt to write those changes to a file by calling [log(changes)]. When [log()] is called, it will wait to acquire the lock with [with file_lock:]. This ensures that at any one time, only one thread is writing to the file.
 
 ### Spawning Processes
 

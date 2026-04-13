@@ -31,7 +31,7 @@ def deploy():
             run('touch app.wsgi')
 ```
 
-With the previous code saved in a file named `fabfile.py`{.interpreted-text role="file"}, we can check memory usage with:
+With the previous code saved in a file named `fabfile.py`, we can check memory usage with:
 
 ``` console
 $ fab memory_usage
@@ -64,7 +64,7 @@ Additional features include parallel execution, interaction with remote programs
 
 [Salt](http://saltstack.org/) is an open source infrastructure management tool. It supports remote command execution from a central point (master host) to multiple hosts (minions). It also supports system states which can be used to configure multiple servers using simple template files.
 
-Salt supports Python versions 2.6 and 2.7 and can be installed via pip:
+Salt can be installed via pip:
 
 ``` console
 $ pip install salt
@@ -160,7 +160,7 @@ A full terminal application like a widely extended top is [Glance](https://githu
 
 [Ansible](http://ansible.com/) is an open source system automation tool. Its biggest advantage over Puppet or Chef is that it does not require an agent on the client machine. Playbooks are Ansible's configuration, deployment, and orchestration language and are written in YAML with Jinja2 for templating.
 
-Ansible supports Python versions 2.6 and 2.7 and can be installed via pip:
+Ansible can be installed via pip:
 
 ``` console
 $ pip install ansible
@@ -168,14 +168,14 @@ $ pip install ansible
 
 Ansible requires an inventory file that describes the hosts to which it has access. Below is an example of a host and playbook that will ping all the hosts in the inventory file.
 
-Here is an example inventory file: `hosts.yml`{.interpreted-text role="file"}
+Here is an example inventory file: `hosts.yml`
 
 ``` yaml
 [server_name]
 127.0.0.1
 ```
 
-Here is an example playbook: `ping.yml`{.interpreted-text role="file"}
+Here is an example playbook: `ping.yml`
 
 ``` yaml
 ---
@@ -192,7 +192,7 @@ To run the playbook:
 $ ansible-playbook ping.yml -i hosts.yml --ask-pass
 ```
 
-The Ansible playbook will ping all of the servers in the `hosts.yml`{.interpreted-text role="file"} file. You can also select groups of servers using Ansible. For more information about Ansible, read the [Ansible Docs](http://docs.ansible.com/).
+The Ansible playbook will ping all of the servers in the `hosts.yml` file. You can also select groups of servers using Ansible. For more information about Ansible, read the [Ansible Docs](http://docs.ansible.com/).
 
 [An Ansible tutorial](https://serversforhackers.com/an-ansible-tutorial/) is also a great and detailed introduction to getting started with Ansible.
 

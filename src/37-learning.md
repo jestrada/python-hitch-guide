@@ -8,7 +8,7 @@
 
 This is the official tutorial. It covers all the basics, and offers a tour of the language and the standard library. Recommended for those who need a quick-start guide to the language.
 
-> [The Python Tutorial](http://docs.python.org/tutorial/index.html)
+> [The Python Tutorial](https://docs.python.org/tutorial/index.html)
 
 ### Real Python
 
@@ -150,7 +150,7 @@ This book is for intermediate to advanced Python programmers who are looking to 
 
 Expert Python Programming deals with best practices in programming Python and is focused on the more advanced crowd.
 
-It starts with topics like decorators (with caching, proxy, and context manager case studies), method resolution order, using super() and meta-programming, and general `8`{.interpreted-text role="pep"} best practices.
+It starts with topics like decorators (with caching, proxy, and context manager case studies), method resolution order, using super() and meta-programming, and general `8` best practices.
 
 It has a detailed, multi-chapter case study on writing and releasing a package and eventually an application, including a chapter on using zc.buildout. Later chapters detail best practices such as writing documentation, test-driven development, version control, optimization, and profiling.
 
@@ -232,7 +232,7 @@ Python in a Nutshell, written by Alex Martelli, covers most cross-platform Pytho
 
 This is Python"s reference manual. It covers the syntax and the core semantics of the language.
 
-> [The Python Language Reference](http://docs.python.org/reference/index.html)
+> [The Python Language Reference](https://docs.python.org/reference/index.html)
 
 ### Python Essential Reference
 

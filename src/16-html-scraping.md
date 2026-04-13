@@ -10,7 +10,7 @@ This is where web scraping comes in. Web scraping is the practice of using a com
 
 ## lxml and Requests
 
-[lxml](http://lxml.de/) is a pretty extensive library written for parsing XML and HTML documents very quickly, even handling messed up tags in the process. We will also be using the [Requests](https://requests.readthedocs.io/en/latest/) module instead of the already built-in urllib2 module due to improvements in speed and readability. You can easily install both using `pip install lxml` and `pip install requests`.
+[lxml](http://lxml.de/) is a pretty extensive library written for parsing XML and HTML documents very quickly, even handling messed up tags in the process. We will also be using the [Requests](https://requests.readthedocs.io/en/latest/) module as it is more intuitive and feature-rich. Install both with `uv add lxml requests`.
 
 Let"s start with the imports:
 

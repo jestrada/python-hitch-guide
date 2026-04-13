@@ -12,7 +12,7 @@ Due to its high performance nature, scientific computing in Python often utilize
 
 ### IPython
 
-[IPython](http://ipython.org/) is an enhanced version of Python interpreter, which provides features of great interest to scientists. The [inline mode]{.title-ref} allows graphics and plots to be displayed in the terminal (Qt based version). Moreover, the [notebook]{.title-ref} mode supports literate programming and reproducible science generating a web-based Python notebook. This notebook allows you to store chunks of Python code alongside the results and additional comments (HTML, LaTeX, Markdown). The notebook can then be shared and exported in various file formats.
+[IPython](http://ipython.org/) is an enhanced version of Python interpreter, which provides features of great interest to scientists. The [inline mode] allows graphics and plots to be displayed in the terminal (Qt based version). Moreover, the [notebook] mode supports literate programming and reproducible science generating a web-based Python notebook. This notebook allows you to store chunks of Python code alongside the results and additional comments (HTML, LaTeX, Markdown). The notebook can then be shared and exported in various file formats.
 
 ## Libraries
 
